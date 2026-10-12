@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
+import { ComeupSection } from "@/components/ComeupSection";
 import { Faq } from "@/components/Faq";
 import { HeroIllustration } from "@/components/HeroIllustration";
 import { Icon, type IconName } from "@/components/Icon";
 import { ProjectCard } from "@/components/ProjectCard";
 import { projects, reviews } from "@/content/projects";
 import { homeFaq, services } from "@/content/services";
-import { communes, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: { absolute: "Agence web à Abidjan | Sites, boutiques en ligne et SEO local" },
+  title: { absolute: "Agence web à Abidjan et en Côte d'Ivoire | Sites, e-commerce, SEO" },
   description:
-    "Agence web à Abidjan : création de site web, boutique en ligne et référencement local pour entreprises. Demandez un devis pour un site clair, rapide et adapté au mobile.",
+    "Agence web à Abidjan et en Côte d'Ivoire : création de site web, boutique en ligne et référencement local pour entreprises. Demandez un devis pour un site clair, rapide et adapté au mobile.",
   alternates: { canonical: "/" },
 };
 
@@ -46,10 +47,10 @@ export default function HomePage() {
               {site.name}, Abidjan
             </p>
             <h1 className="hero-draw mt-6 text-hero">
-              Agence web à Abidjan : des sites clairs qui transforment vos visiteurs en demandes de devis
+              Agence web à Abidjan et en Côte d'Ivoire : des sites clairs qui transforment vos visiteurs en demandes de devis
             </h1>
             <p className="hero-draw prose-measure mt-6 text-lg text-ink-soft sm:text-xl">
-              Création de sites web, boutiques en ligne et référencement local pour les entreprises d'Abidjan. Un interlocuteur, un travail soigné, aucune promesse irréaliste.
+              Création de sites web, boutiques en ligne et référencement local pour les entreprises de Côte d'Ivoire et d'ailleurs. Un interlocuteur, un travail soigné, aucune promesse irréaliste.
             </p>
             <div className="hero-draw mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact" className="btn btn-primary">Demander un devis</Link>
@@ -58,7 +59,10 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <HeroIllustration />
+          <div className="relative rounded-3xl bg-mist px-6 pb-8 pt-10 sm:px-10">
+            <div className="tricolor absolute inset-x-0 top-0 rounded-t-3xl" />
+            <HeroIllustration />
+          </div>
         </div>
       </section>
 
@@ -103,6 +107,8 @@ export default function HomePage() {
         </section>
       )}
 
+      <ComeupSection />
+
       <section className="section">
         <div className="container-page grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
@@ -137,29 +143,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {(reviews.length > 0 || site.comeup) && (
+      {reviews.length > 0 && (
         <section className="section">
           <div className="container-page">
-            <h2 className="text-h2">Avis et profil professionnel</h2>
-            {reviews.length > 0 && (
-              <div className="mt-10 grid gap-6 md:grid-cols-2">
-                {reviews.slice(0, 2).map((r) => (
-                  <figure key={r.author + r.text.slice(0, 12)} className="rounded-2xl border border-line p-7">
-                    <blockquote className="text-lg">{r.text}</blockquote>
-                    <figcaption className="mt-4 text-sm text-ink-soft">
-                      {r.author}, via {r.sourceUrl ? <a className="link-underline" href={r.sourceUrl} target="_blank" rel="noopener noreferrer">{r.source}</a> : r.source}
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-            )}
-            {site.comeup && (
-              <p className="mt-8">
-                <a className="btn btn-secondary" href={site.comeup} target="_blank" rel="noopener noreferrer">
-                  <Icon name="link" size={20} /> Consulter le profil ComeUp
-                </a>
-              </p>
-            )}
+            <h2 className="text-h2">Avis de clients</h2>
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+              {reviews.slice(0, 2).map((r) => (
+                <figure key={r.author + r.text.slice(0, 12)} className="rounded-2xl border border-line p-7">
+                  <blockquote className="text-lg">{r.text}</blockquote>
+                  <figcaption className="mt-4 text-sm text-ink-soft">
+                    {r.author}, via {r.sourceUrl ? <a className="link-underline" href={r.sourceUrl} target="_blank" rel="noopener noreferrer">{r.source}</a> : r.source}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
       )}
@@ -167,15 +164,18 @@ export default function HomePage() {
       <section className="border-y border-line bg-mist">
         <div className="container-page section grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
           <div>
-            <h2 className="text-h2">Des entreprises de toutes les communes d'Abidjan</h2>
+            <h2 className="text-h2">Un service ouvert à toute la Côte d'Ivoire, et au-delà</h2>
             <p className="prose-measure mt-5 text-ink-soft">
-              Les échanges et les rendez-vous se planifient selon votre disponibilité. Votre commune ne change pas la qualité du service.
+              DigiProspect Agency est basée à Abidjan et accompagne des entreprises dans toutes les villes et régions du pays. Pour une entreprise située à l'étranger, le projet se mène à distance.
             </p>
-            <Link href="/zones-intervention-abidjan" className="link-underline mt-6 inline-block font-semibold">Voir les zones desservies</Link>
+            <Link href="/zones-intervention" className="link-underline mt-6 inline-block font-semibold">Voir les zones d'intervention</Link>
           </div>
-          <ul className="flex flex-wrap content-start gap-3">
-            {communes.map((c) => (
-              <li key={c} className="rounded-full border-2 border-ink/15 bg-white px-5 py-2 font-semibold">{c}</li>
+          <ul className="divide-y divide-line border-y border-line">
+            {["Abidjan et toutes ses communes", "Les autres villes et régions de Côte d'Ivoire", "À distance, pour les entreprises hors du pays"].map((z, i) => (
+              <li key={z} className="flex items-center gap-4 py-5 text-lg font-semibold">
+                <span aria-hidden="true" className={`h-3 w-3 shrink-0 rounded-full ${i === 1 ? "bg-green" : i === 0 ? "bg-orange" : "bg-ink"}`} />
+                {z}
+              </li>
             ))}
           </ul>
         </div>

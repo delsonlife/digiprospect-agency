@@ -9,7 +9,7 @@ import { site, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Réalisations : sites web et projets digitaux",
-  description: "Projets réalisés par DigiProspect Agency : sites web, boutiques en ligne et missions de référencement pour des entreprises à Abidjan.",
+  description: "Projets réalisés par DigiProspect Agency : sites web, boutiques en ligne et missions de référencement pour des entreprises en Côte d'Ivoire et à l'international.",
   alternates: { canonical: "/realisations" },
 };
 
@@ -31,7 +31,7 @@ export default function Page() {
             <div className="max-w-2xl">
               <h2 className="text-h3 font-bold">Les projets sont en cours de publication</h2>
               <p className="mt-4 text-lg text-ink-soft">
-                Cette page présentera chaque projet avec sa capture, son type de mission et, lorsque le client l'accepte, le lien vers le site en ligne. En attendant, vous pouvez demander des exemples de travaux précis à votre secteur.
+                Les réalisations de DigiProspect Agency proviennent de son activité sur ComeUp. Cette page présentera chaque projet avec sa capture, son type de mission et, lorsque le client l'accepte, le lien vers le site en ligne. En attendant, vous pouvez demander des exemples de travaux précis à votre secteur.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a href={whatsappLink("Bonjour, pouvez-vous me montrer des exemples de projets réalisés ?")} target="_blank" rel="noopener noreferrer" className="btn btn-primary">

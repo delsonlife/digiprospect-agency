@@ -8,7 +8,7 @@ const pages: { path: string; priority: number }[] = [
   { path: "/seo-referencement-local", priority: 0.9 },
   { path: "/realisations", priority: 0.7 },
   { path: "/a-propos", priority: 0.5 },
-  { path: "/zones-intervention-abidjan", priority: 0.5 },
+  { path: "/zones-intervention", priority: 0.5 },
   { path: "/contact", priority: 0.8 },
 ];
 

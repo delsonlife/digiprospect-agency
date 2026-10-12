@@ -53,6 +53,7 @@ git push -u origin main
 ## Après la mise en ligne
 - Google Search Console : ajoutez la propriété du domaine, validez-la par DNS, soumettez `https://digiprospectagency.com/sitemap.xml`.
 - Si l'ancien site avait des URL à conserver, ajoutez-les en redirections 301 dans `next.config.ts` (exemple commenté).
+- Zones d'intervention : la page est `/zones-intervention` (l'ancienne adresse `/zones-intervention-abidjan` redirige).
 - Google Business Profile : à traiter séparément, après vérification de l'éligibilité.
 
 ## Où modifier le contenu

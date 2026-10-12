@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { ComeupSection } from "@/components/ComeupSection";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "À propos de DigiProspect Agency",
-  description: "DigiProspect Agency accompagne les entreprises d'Abidjan dans leur visibilité en ligne : sites web, boutiques en ligne et référencement local.",
+  description: "DigiProspect Agency accompagne les entreprises de Côte d'Ivoire et d'ailleurs dans leur visibilité en ligne : sites web, boutiques en ligne et référencement local.",
   alternates: { canonical: "/a-propos" },
 };
 
@@ -21,7 +22,7 @@ export default function Page() {
     <>
       <PageHero
         crumbs={[{ name: "À propos", href: "/a-propos" }]}
-        title="Une agence web pensée pour les entreprises d'Abidjan"
+        title="Une agence web pensée pour les entreprises de Côte d'Ivoire et d'ailleurs"
         intro="DigiProspect Agency aide les entreprises à présenter clairement leur activité en ligne et à être contactées par les bons clients."
         image={{ src: "/images/a-propos-digiprospect-poste-de-travail.svg", alt: "Illustration d'un poste de travail avec ordinateur, liste de tâches et café" }}
       />
@@ -33,7 +34,7 @@ export default function Page() {
               Le nom dit l'objectif : un site utile se juge à ce qu'il apporte à l'entreprise, pas seulement à son apparence. Chaque projet commence par une question simple : qui doit vous trouver, et que doit-il faire ensuite ?
             </p>
             <p className="prose-measure mt-4 text-lg text-ink-soft">
-              {site.name} intervient auprès des entreprises d'Abidjan sur trois sujets : le site web, la boutique en ligne et le référencement local.
+              {site.name} est basée à Abidjan et intervient partout en Côte d'Ivoire, ainsi qu'à distance à l'international, sur trois sujets : le site web, la boutique en ligne et le référencement local.
             </p>
             {/* TODO : ajouter ici une courte présentation personnelle (parcours, spécialités) et une photo réelle. */}
           </div>
@@ -47,6 +48,7 @@ export default function Page() {
           </ul>
         </div>
       </section>
+      <ComeupSection showAboutLink={false} />
       <CtaBand />
     </>
   );

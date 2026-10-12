@@ -106,7 +106,7 @@ export function ServicePage({ service, related }: { service: Service; related: S
           description: service.description,
           url: `${SITE_URL}${service.path}`,
           provider: { "@id": `${SITE_URL}/#organization` },
-          areaServed: { "@type": "City", name: "Abidjan" },
+          areaServed: { "@type": "Country", name: "Côte d'Ivoire" },
           serviceType: service.name,
         }}
       />

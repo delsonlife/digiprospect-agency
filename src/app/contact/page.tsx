@@ -6,7 +6,7 @@ import { site, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Demande de devis et contact",
-  description: "Demandez un devis pour un site web, une boutique en ligne ou du référencement local à Abidjan. Réponse par e-mail ou WhatsApp.",
+  description: "Demandez un devis pour un site web, une boutique en ligne ou du référencement local, en Côte d'Ivoire ou à distance. Réponse par e-mail ou WhatsApp.",
   alternates: { canonical: "/contact" },
 };
 

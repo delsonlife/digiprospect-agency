@@ -3,7 +3,7 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://digiprospe
 export const site = {
   name: "DigiProspect Agency",
   shortName: "DigiProspect",
-  tagline: "Sites web, boutiques en ligne et référencement local à Abidjan",
+  tagline: "Sites web, boutiques en ligne et référencement local en Côte d'Ivoire",
   locale: "fr_CI",
   city: "Abidjan",
   country: "Côte d'Ivoire",

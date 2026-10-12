@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [{ source: "/zones-intervention-abidjan", destination: "/zones-intervention", permanent: true }];
+  },
   // Redirections : ajouter ici les anciennes URL de digiprospectagency.com
   // si elles doivent être conservées. Exemple :
   // async redirects() { return [{ source: "/ancienne-page", destination: "/creation-site-web-abidjan", permanent: true }]; },

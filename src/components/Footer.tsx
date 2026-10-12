@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { Icon } from "./Icon";
-import { communes, nav, site, whatsappLink } from "@/lib/site";
+import { nav, site, whatsappLink } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -11,7 +11,7 @@ export function Footer() {
         <div>
           <Logo light />
           <p className="mt-5 max-w-xs text-[0.95rem] leading-relaxed">
-            Sites web, boutiques en ligne et référencement local pour les entreprises d'Abidjan et de Côte d'Ivoire.
+            Sites web, boutiques en ligne et référencement local pour les entreprises de Côte d'Ivoire et d'ailleurs.
           </p>
         </div>
         <div>
@@ -27,7 +27,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-[0.95rem]">
             <li><Link href="/realisations" className="inline-block py-1 hover:text-white link-underline">Réalisations</Link></li>
             <li><Link href="/a-propos" className="inline-block py-1 hover:text-white link-underline">À propos</Link></li>
-            <li><Link href="/zones-intervention-abidjan" className="inline-block py-1 hover:text-white link-underline">Zones à Abidjan</Link></li>
+            <li><Link href="/zones-intervention" className="inline-block py-1 hover:text-white link-underline">Zones d'intervention</Link></li>
             <li><Link href="/contact" className="inline-block py-1 hover:text-white link-underline">Demande de devis</Link></li>
           </ul>
         </div>
@@ -51,8 +51,8 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-page py-6 text-sm text-white/60">
-          <p>Interventions auprès d'entreprises dans les communes d'Abidjan : {communes.join(", ")}.</p>
+        <div className="container-page py-6 pb-28 text-sm text-white/60 md:pb-6">
+          <p>Projets menés partout en Côte d'Ivoire, et à distance pour les entreprises situées à l'étranger.</p>
           <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <p>© {new Date().getFullYear()} {site.name}. Tous droits réservés.</p>
             <p className="flex gap-5">

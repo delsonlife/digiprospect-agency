@@ -62,7 +62,7 @@ export function Header() {
         <div id="mobile-menu" ref={panelRef} role="dialog" aria-modal="true" aria-label="Menu"
           className="fixed inset-x-0 bottom-0 top-[calc(4.25rem+4px)] z-40 overflow-y-auto bg-white lg:hidden">
           <nav aria-label="Navigation mobile" className="container-page flex flex-col py-4">
-            {[{ href: "/", label: "Accueil" }, ...nav, { href: "/zones-intervention-abidjan", label: "Zones à Abidjan" }].map((item) => (
+            {[{ href: "/", label: "Accueil" }, ...nav, { href: "/zones-intervention", label: "Zones d'intervention" }].map((item) => (
               <Link key={item.href} href={item.href} aria-current={pathname === item.href ? "page" : undefined}
                 className="flex min-h-14 items-center justify-between border-b border-line font-display text-xl font-semibold">
                 {item.label}

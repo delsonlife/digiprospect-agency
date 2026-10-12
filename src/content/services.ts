@@ -26,10 +26,10 @@ export const services: Service[] = [
     path: "/creation-site-web-abidjan",
     name: "Création de sites web",
     short: "Sites vitrines, refontes et sites adaptés au mobile, pensés pour rassurer et générer des demandes.",
-    title: "Création de site web à Abidjan : vitrine, refonte, mobile",
+    title: "Création de site web à Abidjan et en Côte d'Ivoire : vitrine, refonte",
     description:
-      "Création et refonte de site web professionnel à Abidjan : site vitrine adapté au mobile, rapide, pensé pour le référencement et la demande de devis. Devis sur demande.",
-    h1: "Création de site web à Abidjan pour les entreprises qui veulent être trouvées et contactées",
+      "Création et refonte de site web professionnel à Abidjan et en Côte d'Ivoire : site vitrine adapté au mobile, rapide, pensé pour le référencement et la demande de devis. Devis sur demande.",
+    h1: "Création de site web à Abidjan et partout en Côte d'Ivoire : être trouvé et contacté",
     intro:
       "Un site professionnel doit répondre vite à trois questions : que faites-vous, pour qui, et comment vous joindre. DigiProspect Agency conçoit des sites clairs, rapides sur téléphone, et construits pour que vos visiteurs passent à l'action.",
     problem:
@@ -88,10 +88,10 @@ export const services: Service[] = [
     path: "/creation-site-ecommerce",
     name: "Boutiques en ligne",
     short: "Sites de vente en ligne : catalogue clair, parcours d'achat simple, adapté à vos moyens d'encaissement.",
-    title: "Création de boutique en ligne à Abidjan : site e-commerce",
+    title: "Création de boutique en ligne à Abidjan et en Côte d'Ivoire",
     description:
-      "Création de boutique en ligne pour commerçants à Abidjan : catalogue produits, parcours de commande simple, version mobile soignée. Devis sur demande.",
-    h1: "Créer une boutique en ligne à Abidjan, simple à gérer et agréable à utiliser",
+      "Création de boutique en ligne pour commerçants en Côte d'Ivoire : catalogue produits, parcours de commande simple, version mobile soignée. Devis sur demande.",
+    h1: "Créer une boutique en ligne à Abidjan et en Côte d'Ivoire, simple à gérer et agréable à utiliser",
     intro:
       "Vendre en ligne ne se résume pas à publier des photos. Il faut un catalogue lisible, un parcours de commande court et des informations qui rassurent l'acheteur. La boutique est conçue autour de votre façon de vendre.",
     problem:
@@ -145,14 +145,14 @@ export const services: Service[] = [
     path: "/seo-referencement-local",
     name: "SEO et référencement local",
     short: "Optimisation technique et éditoriale, visibilité organique et accompagnement Google Business Profile si éligible.",
-    title: "Agence SEO à Abidjan : référencement naturel et local",
+    title: "Agence SEO à Abidjan et en Côte d'Ivoire : référencement naturel et local",
     description:
-      "Référencement naturel et local à Abidjan : audit technique, optimisation des pages, contenus utiles et accompagnement Google Business Profile si éligible. Sans promesse de position.",
-    h1: "Référencement naturel et local à Abidjan : être trouvé par des clients qui vous cherchent",
+      "Référencement naturel et local à Abidjan et en Côte d'Ivoire : audit technique, optimisation des pages, contenus utiles et accompagnement Google Business Profile si éligible. Sans promesse de position.",
+    h1: "Référencement naturel et local à Abidjan et en Côte d'Ivoire : être trouvé par vos clients",
     intro:
       "Le référencement consiste à rendre votre site compréhensible pour Google et utile pour vos visiteurs. DigiProspect Agency commence par comprendre ce que vos clients recherchent, puis améliore ce qui freine la visibilité de votre site.",
     problem:
-      "Votre entreprise existe, mais quand un client cherche votre service à Abidjan, il tombe sur vos concurrents. Souvent, le site manque de pages claires, de titres adaptés, de vitesse ou d'informations cohérentes sur Internet.",
+      "Votre entreprise existe, mais quand un client cherche votre service dans votre ville, il tombe sur vos concurrents. Souvent, le site manque de pages claires, de titres adaptés, de vitesse ou d'informations cohérentes sur Internet.",
     benefits: [
       "Un diagnostic précis de ce qui bloque la visibilité de votre site.",
       "Des pages qui répondent aux vraies recherches de vos clients.",
@@ -177,7 +177,7 @@ export const services: Service[] = [
     needed: [
       "L'adresse de votre site actuel, s'il existe",
       "Les services pour lesquels vous voulez être trouvé",
-      "Les zones d'Abidjan où se trouvent vos clients",
+      "Les villes et zones où se trouvent vos clients",
       "Un accès à Google Search Console ou la possibilité de le créer avec vous",
     ],
     quoteLabel: "Demander un audit SEO",
@@ -195,7 +195,7 @@ export const services: Service[] = [
         a: "Cela dépend de vos conditions d'exercice : Google attend notamment un contact réel avec les clients, et applique des règles propres aux entreprises sans local ouvert au public. L'éligibilité est vérifiée avant toute démarche.",
       },
       {
-        q: "Faut-il une page par commune d'Abidjan ?",
+        q: "Faut-il une page par ville ou par commune ?",
         a: "Non. Des pages quasi identiques ne servent ni vos visiteurs ni Google. Une page locale n'est utile que si elle contient des informations propres à la zone.",
       },
     ],
@@ -203,6 +203,10 @@ export const services: Service[] = [
 ];
 
 export const homeFaq: Faq[] = [
+  {
+    q: "Intervenez-vous en dehors d'Abidjan ?",
+    a: "Oui. DigiProspect Agency est basée à Abidjan et accompagne des entreprises dans toute la Côte d'Ivoire. Pour une entreprise située à l'étranger, le projet se mène à distance.",
+  },
   {
     q: "Quels types de projets prenez-vous en charge ?",
     a: "Création et refonte de sites vitrines, boutiques en ligne, et optimisation pour le référencement naturel et local. Si votre besoin sort de ce cadre, l'agence le précise avant de commencer.",
