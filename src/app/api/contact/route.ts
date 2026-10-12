@@ -84,7 +84,7 @@ export async function POST(req: Request) {
   } catch (err) {
     console.error("Resend injoignable", err);
     return NextResponse.json(
-      { ok: false, error: "L'envoi a échoué. Réessayez ou écrivez-nous sur WhatsApp." },
+      { ok: false, error: "L'envoi a échoué. Réessayez ou contactez DigiProspect Agency sur WhatsApp." },
       { status: 502 },
     );
   }
@@ -92,7 +92,7 @@ export async function POST(req: Request) {
   if (!res.ok) {
     console.error("Resend error", res.status, await res.text().catch(() => ""));
     return NextResponse.json(
-      { ok: false, error: "L'envoi a échoué. Réessayez ou écrivez-nous sur WhatsApp." },
+      { ok: false, error: "L'envoi a échoué. Réessayez ou contactez DigiProspect Agency sur WhatsApp." },
       { status: 502 },
     );
   }

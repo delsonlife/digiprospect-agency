@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const serviceIcons: IconName[] = ["browser", "cart", "search"];
 
 const method = [
-  { title: "Échange et cadrage", text: "Vous décrivez votre activité et votre objectif. Nous définissons ce qui est utile, et ce qui peut attendre." },
+  { title: "Échange et cadrage", text: "Vous décrivez votre activité et votre objectif. Le cadrage fixe ce qui est utile, et ce qui peut attendre." },
   { title: "Proposition écrite", text: "Pages, fonctionnalités, contenus à fournir et prix : tout est posé avant de commencer." },
   { title: "Réalisation et validation", text: "Vous voyez le travail avancer et validez chaque étape avant la mise en ligne." },
   { title: "Mise en ligne et suivi", text: "Déploiement, vérifications techniques, déclaration à Google, puis ajustements." },
@@ -67,7 +67,7 @@ export default function HomePage() {
           <div className="lg:sticky lg:top-28 lg:self-start">
             <h2 className="text-h2">Trois services, chacun avec un objectif précis</h2>
             <p className="prose-measure mt-5 text-ink-soft">
-              Pas de catalogue interminable : seulement ce que je peux réaliser et suivre sérieusement.
+              Pas de catalogue interminable : seulement ce que l'agence peut réaliser et suivre sérieusement.
             </p>
           </div>
           <ul className="divide-y divide-line border-y border-line">
@@ -156,7 +156,7 @@ export default function HomePage() {
             {site.comeup && (
               <p className="mt-8">
                 <a className="btn btn-secondary" href={site.comeup} target="_blank" rel="noopener noreferrer">
-                  <Icon name="link" size={20} /> Consulter mon profil ComeUp
+                  <Icon name="link" size={20} /> Consulter le profil ComeUp
                 </a>
               </p>
             )}

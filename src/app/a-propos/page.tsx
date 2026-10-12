@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const principles = [
-  { title: "Dire ce qui est faisable", text: "Si un besoin sort de mon périmètre ou si une promesse n'est pas tenable, je vous le dis avant de commencer." },
+  { title: "Dire ce qui est faisable", text: "Si un besoin sort du périmètre de l'agence ou si une promesse n'est pas tenable, DigiProspect Agency le précise avant de commencer." },
   { title: "Construire pour le client final", text: "Un site réussi est d'abord clair pour la personne qui le visite : que proposez-vous, et comment vous contacter." },
   { title: "Rester transparent", text: "Prix, contenus à fournir, étapes et limites sont écrits. Aucun résultat Google n'est garanti, car personne ne peut le faire." },
   { title: "Laisser le site à jour", text: "Le site doit pouvoir vivre après la livraison : vous savez le modifier, ou vous savez à qui le demander." },
@@ -23,6 +23,7 @@ export default function Page() {
         crumbs={[{ name: "À propos", href: "/a-propos" }]}
         title="Une agence web pensée pour les entreprises d'Abidjan"
         intro="DigiProspect Agency aide les entreprises à présenter clairement leur activité en ligne et à être contactées par les bons clients."
+        image={{ src: "/images/a-propos-digiprospect-poste-de-travail.svg", alt: "Illustration d'un poste de travail avec ordinateur, liste de tâches et café" }}
       />
       <section className="section">
         <div className="container-page grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20">

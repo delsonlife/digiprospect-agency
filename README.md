@@ -63,3 +63,6 @@ git push -u origin main
 
 ## À valider par vous avant publication
 Certaines phrases décrivent une façon de travailler (proposition écrite avant démarrage, redirections lors d'une refonte, prise en main après livraison, échanges par rendez-vous). Vérifiez qu'elles correspondent à votre pratique réelle. Vérifiez aussi la liste des communes (noms et limites administratives).
+
+## Images
+Les illustrations des pages sont des SVG originaux dans `public/images/` (noms descriptifs, textes alternatifs définis dans chaque page ou dans `src/content/services.ts`). Pour les remplacer par de vraies photos, déposez le fichier dans `public/images/` et modifiez le `src` et le `alt` correspondants. La page Réalisations n'a volontairement pas d'image : ses visuels viendront de `src/content/projects.ts`.

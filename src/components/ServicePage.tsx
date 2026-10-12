@@ -10,7 +10,7 @@ import { SITE_URL, site, whatsappMessages } from "@/lib/site";
 export function ServicePage({ service, related }: { service: Service; related: Service[] }) {
   return (
     <>
-      <PageHero crumbs={[{ name: service.name, href: service.path }]} title={service.h1} intro={service.intro}>
+      <PageHero crumbs={[{ name: service.name, href: service.path }]} title={service.h1} intro={service.intro} image={service.image}>
         <Link href={`/contact?service=${service.slug}`} className="btn btn-primary">{service.quoteLabel}</Link>
       </PageHero>
 
@@ -64,8 +64,8 @@ export function ServicePage({ service, related }: { service: Service; related: S
       <section className="bg-ink text-white">
         <div className="container-page section grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
           <div>
-            <h2 className="text-h2">Pour démarrer, il me faut</h2>
-            <p className="prose-measure mt-4 text-white/75">Rien de tout cela n'est bloquant : nous complétons ensemble ce qui manque.</p>
+            <h2 className="text-h2">Pour démarrer, il faut</h2>
+            <p className="prose-measure mt-4 text-white/75">Rien de tout cela n'est bloquant : ce qui manque se complète ensemble.</p>
           </div>
           <ul className="space-y-4">
             {service.needed.map((n) => (

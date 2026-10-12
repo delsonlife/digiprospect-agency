@@ -48,10 +48,10 @@ export function ContactForm({ defaultService = "" }: { defaultService?: string }
         return;
       }
       if (data.fields) setErrors(data.fields);
-      setServerError(data.error || "L'envoi a échoué. Réessayez ou écrivez-nous sur WhatsApp.");
+      setServerError(data.error || "L'envoi a échoué. Réessayez ou contactez DigiProspect Agency sur WhatsApp.");
       setStatus("error");
     } catch {
-      setServerError("Connexion impossible. Vérifiez votre réseau, puis réessayez ou écrivez-nous sur WhatsApp.");
+      setServerError("Connexion impossible. Vérifiez votre réseau, puis réessayez ou contactez DigiProspect Agency sur WhatsApp.");
       setStatus("error");
     }
   }

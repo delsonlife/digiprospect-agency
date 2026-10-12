@@ -24,6 +24,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
         crumbs={[{ name: "Contact", href: "/contact" }]}
         title="Demander un devis"
         intro="Décrivez votre activité et votre besoin en quelques lignes. Vous recevez une réponse précise sur la suite."
+        image={{ src: "/images/contact-devis-digiprospect-whatsapp-formulaire.svg", alt: "Illustration d'un formulaire de devis et d'une conversation WhatsApp sur téléphone" }}
       />
       <section className="section">
         <div className="container-page grid gap-14 lg:grid-cols-[1.3fr_1fr] lg:gap-20">
@@ -42,8 +43,8 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
             <div>
               <h2 className="text-h3 font-bold">Ce qui se passe ensuite</h2>
               <ol className="mt-4 space-y-3 text-ink-soft">
-                <li>Je lis votre demande et prépare les questions utiles.</li>
-                <li>Nous échangeons par WhatsApp, téléphone ou rendez-vous, selon votre préférence.</li>
+                <li>Votre demande est lue et les questions utiles sont préparées.</li>
+                <li>Un échange a lieu par WhatsApp, téléphone ou rendez-vous, selon votre préférence.</li>
                 <li>Vous recevez une proposition écrite que vous êtes libre d'accepter ou non.</li>
               </ol>
             </div>

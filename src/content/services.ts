@@ -1,6 +1,7 @@
 export type Faq = { q: string; a: string };
 
 export type Service = {
+  image: { src: string; alt: string };
   slug: string;
   path: string;
   name: string;
@@ -21,6 +22,7 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "creation-site-web",
+    image: { src: "/images/creation-site-web-abidjan-maquette-responsive.svg", alt: "Illustration d'un site web affiché sur ordinateur et sur téléphone, avec un bouton de contact" },
     path: "/creation-site-web-abidjan",
     name: "Création de sites web",
     short: "Sites vitrines, refontes et sites adaptés au mobile, pensés pour rassurer et générer des demandes.",
@@ -29,7 +31,7 @@ export const services: Service[] = [
       "Création et refonte de site web professionnel à Abidjan : site vitrine adapté au mobile, rapide, pensé pour le référencement et la demande de devis. Devis sur demande.",
     h1: "Création de site web à Abidjan pour les entreprises qui veulent être trouvées et contactées",
     intro:
-      "Un site professionnel doit répondre vite à trois questions : que faites-vous, pour qui, et comment vous joindre. Je conçois des sites clairs, rapides sur téléphone, et construits pour que vos visiteurs passent à l'action.",
+      "Un site professionnel doit répondre vite à trois questions : que faites-vous, pour qui, et comment vous joindre. DigiProspect Agency conçoit des sites clairs, rapides sur téléphone, et construits pour que vos visiteurs passent à l'action.",
     problem:
       "Beaucoup d'entreprises ont un site qui existe, mais qui n'aide pas : texte flou, affichage difficile sur téléphone, aucun bouton pour demander un devis, pages introuvables sur Google. Le visiteur repart sans vous avoir contacté.",
     benefits: [
@@ -47,10 +49,10 @@ export const services: Service[] = [
       "Configuration de base du référencement et mise en ligne",
     ],
     steps: [
-      { title: "Cadrage", text: "Nous définissons votre activité, vos clients cibles, vos pages et l'objectif principal du site." },
+      { title: "Cadrage", text: "Définition de votre activité, de vos clients cibles, de vos pages et de l'objectif principal du site." },
       { title: "Structure et contenus", text: "Validation de l'arborescence, puis rédaction ou reprise des textes avec vos éléments." },
       { title: "Design et développement", text: "Création des pages, adaptation mobile, tests sur plusieurs tailles d'écran." },
-      { title: "Relecture et corrections", text: "Vous testez le site, nous ajustons les textes, les visuels et les formulaires." },
+      { title: "Relecture et corrections", text: "Vous testez le site, puis les textes, les visuels et les formulaires sont ajustés." },
       { title: "Mise en ligne", text: "Connexion du domaine, vérifications techniques, déclaration à Google Search Console." },
     ],
     needed: [
@@ -72,16 +74,17 @@ export const services: Service[] = [
       },
       {
         q: "Le site sera-t-il bien placé sur Google ?",
-        a: "Je construis une base technique et éditoriale propre, mais personne ne peut garantir une position sur Google. Le classement dépend aussi de la concurrence et du temps.",
+        a: "DigiProspect Agency construit une base technique et éditoriale propre, mais personne ne peut garantir une position sur Google. Le classement dépend aussi de la concurrence et du temps.",
       },
       {
         q: "Comment obtenir un prix ?",
-        a: "Le prix dépend du nombre de pages, des fonctionnalités et des contenus à produire. Envoyez votre demande : je réponds avec un devis écrit.",
+        a: "Le prix dépend du nombre de pages, des fonctionnalités et des contenus à produire. Envoyez votre demande : un devis écrit vous est adressé.",
       },
     ],
   },
   {
     slug: "creation-site-ecommerce",
+    image: { src: "/images/boutique-en-ligne-abidjan-catalogue-produits.svg", alt: "Illustration d'une boutique en ligne avec catalogue de produits et panier" },
     path: "/creation-site-ecommerce",
     name: "Boutiques en ligne",
     short: "Sites de vente en ligne : catalogue clair, parcours d'achat simple, adapté à vos moyens d'encaissement.",
@@ -90,7 +93,7 @@ export const services: Service[] = [
       "Création de boutique en ligne pour commerçants à Abidjan : catalogue produits, parcours de commande simple, version mobile soignée. Devis sur demande.",
     h1: "Créer une boutique en ligne à Abidjan, simple à gérer et agréable à utiliser",
     intro:
-      "Vendre en ligne ne se résume pas à publier des photos. Il faut un catalogue lisible, un parcours de commande court et des informations qui rassurent l'acheteur. Je conçois la boutique autour de votre façon de vendre.",
+      "Vendre en ligne ne se résume pas à publier des photos. Il faut un catalogue lisible, un parcours de commande court et des informations qui rassurent l'acheteur. La boutique est conçue autour de votre façon de vendre.",
     problem:
       "Vendre uniquement par messages ou sur les réseaux sociaux oblige à répondre aux mêmes questions toute la journée : prix, disponibilité, livraison. Les commandes se perdent dans les conversations et le catalogue n'est jamais à jour.",
     benefits: [
@@ -109,9 +112,9 @@ export const services: Service[] = [
     ],
     steps: [
       { title: "Analyse de votre vente", text: "Produits, zones de livraison, moyens d'encaissement, volume de commandes attendu." },
-      { title: "Choix de la solution", text: "Nous retenons l'outil le plus adapté à votre budget et à votre niveau d'autonomie." },
+      { title: "Choix de la solution", text: "Choix de l'outil le plus adapté à votre budget et à votre niveau d'autonomie." },
       { title: "Mise en place du catalogue", text: "Structure des catégories, fiches produits, photos et descriptions." },
-      { title: "Tests de commande", text: "Nous passons des commandes d'essai complètes avant l'ouverture." },
+      { title: "Tests de commande", text: "Des commandes d'essai complètes sont passées avant l'ouverture." },
       { title: "Ouverture et accompagnement", text: "Mise en ligne, prise en main, premiers ajustements." },
     ],
     needed: [
@@ -124,20 +127,21 @@ export const services: Service[] = [
     faq: [
       {
         q: "Quels moyens de paiement peut-on proposer ?",
-        a: "Cela dépend de la solution retenue et de vos accords avec les opérateurs de paiement. Nous le définissons ensemble pendant le cadrage.",
+        a: "Cela dépend de la solution retenue et de vos accords avec les opérateurs de paiement. Cela se définit avec vous pendant le cadrage.",
       },
       {
         q: "Puis-je gérer mes produits moi-même ?",
-        a: "Oui. La boutique est livrée avec une prise en main pour ajouter, modifier et retirer des produits sans passer par moi.",
+        a: "Oui. La boutique est livrée avec une prise en main pour ajouter, modifier et retirer des produits sans passer par l'agence.",
       },
       {
         q: "Une boutique en ligne est-elle adaptée à une petite activité ?",
-        a: "Si vos produits sont déjà demandés par message, c'est souvent un bon point de départ. Nous commençons par le nécessaire, puis la boutique évolue.",
+        a: "Si vos produits sont déjà demandés par message, c'est souvent un bon point de départ. Le plus simple est de commencer par le nécessaire, puis de faire évoluer la boutique.",
       },
     ],
   },
   {
     slug: "seo-referencement-local",
+    image: { src: "/images/referencement-local-abidjan-resultats-recherche.svg", alt: "Illustration d'une recherche Google avec résultats et repère de localisation sur une carte" },
     path: "/seo-referencement-local",
     name: "SEO et référencement local",
     short: "Optimisation technique et éditoriale, visibilité organique et accompagnement Google Business Profile si éligible.",
@@ -146,7 +150,7 @@ export const services: Service[] = [
       "Référencement naturel et local à Abidjan : audit technique, optimisation des pages, contenus utiles et accompagnement Google Business Profile si éligible. Sans promesse de position.",
     h1: "Référencement naturel et local à Abidjan : être trouvé par des clients qui vous cherchent",
     intro:
-      "Le référencement consiste à rendre votre site compréhensible pour Google et utile pour vos visiteurs. Je commence par comprendre ce que vos clients recherchent, puis j'améliore ce qui freine la visibilité de votre site.",
+      "Le référencement consiste à rendre votre site compréhensible pour Google et utile pour vos visiteurs. DigiProspect Agency commence par comprendre ce que vos clients recherchent, puis améliore ce qui freine la visibilité de votre site.",
     problem:
       "Votre entreprise existe, mais quand un client cherche votre service à Abidjan, il tombe sur vos concurrents. Souvent, le site manque de pages claires, de titres adaptés, de vitesse ou d'informations cohérentes sur Internet.",
     benefits: [
@@ -184,7 +188,7 @@ export const services: Service[] = [
       },
       {
         q: "Pouvez-vous me placer en première position ?",
-        a: "Non, et méfiez-vous de ceux qui le promettent. Je travaille sur ce qui est maîtrisable : technique, contenu, cohérence des informations.",
+        a: "Non, et méfiez-vous de ceux qui le promettent. DigiProspect Agency travaille sur ce qui est maîtrisable : technique, contenu, cohérence des informations.",
       },
       {
         q: "Ai-je droit à une fiche Google Business Profile ?",
@@ -201,11 +205,11 @@ export const services: Service[] = [
 export const homeFaq: Faq[] = [
   {
     q: "Quels types de projets prenez-vous en charge ?",
-    a: "Création et refonte de sites vitrines, boutiques en ligne, et optimisation pour le référencement naturel et local. Si votre besoin sort de ce cadre, je vous le dis avant de commencer.",
+    a: "Création et refonte de sites vitrines, boutiques en ligne, et optimisation pour le référencement naturel et local. Si votre besoin sort de ce cadre, l'agence le précise avant de commencer.",
   },
   {
     q: "Comment se passe une demande de devis ?",
-    a: "Vous remplissez le formulaire ou m'écrivez sur WhatsApp en décrivant votre activité et votre besoin. Je reviens vers vous pour préciser les points utiles, puis j'envoie une proposition écrite.",
+    a: "Vous remplissez le formulaire ou écrivez sur WhatsApp en décrivant votre activité et votre besoin. DigiProspect Agency revient vers vous pour préciser les points utiles, puis envoie une proposition écrite.",
   },
   {
     q: "Que dois-je préparer avant de vous contacter ?",
@@ -213,7 +217,7 @@ export const homeFaq: Faq[] = [
   },
   {
     q: "Garantissez-vous des résultats sur Google ou un nombre de clients ?",
-    a: "Non. Je m'engage sur le travail réalisé et sa qualité, pas sur un classement ou un volume de demandes, qui dépendent aussi du marché et de votre activité.",
+    a: "Non. DigiProspect Agency s'engage sur le travail réalisé et sa qualité, pas sur un classement ou un volume de demandes, qui dépendent aussi du marché et de votre activité.",
   },
   {
     q: "Pouvez-vous reprendre mon site actuel ?",

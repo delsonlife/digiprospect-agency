@@ -17,6 +17,7 @@ export default function Page() {
         crumbs={[{ name: "Zones desservies", href: "/zones-intervention-abidjan" }]}
         title="Entreprises accompagnées dans les communes d'Abidjan"
         intro="Le service est le même quelle que soit la commune où se trouve votre entreprise. Voici les communes du district d'Abidjan concernées."
+        image={{ src: "/images/zones-abidjan-communes-schema.svg", alt: "Schéma abstrait de points reliés représentant les communes d'Abidjan, sans valeur cartographique" }}
       />
       <section className="section">
         <div className="container-page grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
@@ -34,7 +35,7 @@ export default function Page() {
               Créer une page presque identique par commune n'aiderait ni les visiteurs ni le référencement. Une page locale n'a de sens que si elle apporte des informations propres à la zone, et elle sera ajoutée le jour où ce sera le cas.
             </p>
             <p className="prose-measure mt-4 text-ink-soft">
-              Pour votre entreprise, ce qui compte est la clientèle que vous voulez toucher : c'est ce que nous définissons ensemble lors du cadrage d'un site ou d'une démarche de <Link href="/seo-referencement-local" className="link-underline">référencement local</Link>.
+              Pour votre entreprise, ce qui compte est la clientèle que vous voulez toucher : c'est ce que définit le cadrage d'un site ou d'une démarche de <Link href="/seo-referencement-local" className="link-underline">référencement local</Link>.
             </p>
           </div>
         </div>

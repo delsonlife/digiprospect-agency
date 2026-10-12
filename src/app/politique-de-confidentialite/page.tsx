@@ -14,7 +14,7 @@ const todo = "text-orange-deep font-semibold";
 export default function Page() {
   return (
     <>
-      <PageHero crumbs={[{ name: "Confidentialité", href: "/politique-de-confidentialite" }]} title="Politique de confidentialité" />
+      <PageHero crumbs={[{ name: "Confidentialité", href: "/politique-de-confidentialite" }]} title="Politique de confidentialité" image={{ src: "/images/politique-confidentialite-donnees-protegees.svg", alt: "Illustration d'un bouclier avec cadenas symbolisant la protection des données" }} />
       <section className="section">
         <div className="container-page prose-measure space-y-10">
           <p className="rounded-lg border-2 border-orange bg-mist p-4 text-sm">
@@ -26,7 +26,7 @@ export default function Page() {
           </div>
           <div>
             <h2 className="text-h3 font-bold">Données collectées</h2>
-            <p className="mt-3 text-ink-soft">Lorsque vous envoyez une demande de devis, nous recevons : votre nom, votre entreprise (facultatif), votre e-mail ou numéro, le service souhaité, votre message et, si vous l'indiquez, un budget indicatif.</p>
+            <p className="mt-3 text-ink-soft">Lorsque vous envoyez une demande de devis, DigiProspect Agency reçoit : votre nom, votre entreprise (facultatif), votre e-mail ou numéro, le service souhaité, votre message et, si vous l'indiquez, un budget indicatif.</p>
           </div>
           <div>
             <h2 className="text-h3 font-bold">Finalité</h2>
@@ -42,7 +42,7 @@ export default function Page() {
           </div>
           <div>
             <h2 className="text-h3 font-bold">Vos droits</h2>
-            <p className="mt-3 text-ink-soft">Vous pouvez demander l'accès, la rectification ou la suppression de vos données en nous écrivant via le <a className="link-underline" href="/contact">formulaire de contact</a>. <span className={todo}>[À COMPLÉTER : références légales applicables et autorité de protection compétente]</span></p>
+            <p className="mt-3 text-ink-soft">Vous pouvez demander l'accès, la rectification ou la suppression de vos données en écrivant via le <a className="link-underline" href="/contact">formulaire de contact</a>. <span className={todo}>[À COMPLÉTER : références légales applicables et autorité de protection compétente]</span></p>
           </div>
           <div>
             <h2 className="text-h3 font-bold">Cookies</h2>

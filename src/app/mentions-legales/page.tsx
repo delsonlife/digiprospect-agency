@@ -14,7 +14,7 @@ const todo = "text-orange-deep font-semibold";
 export default function Page() {
   return (
     <>
-      <PageHero crumbs={[{ name: "Mentions légales", href: "/mentions-legales" }]} title="Mentions légales" />
+      <PageHero crumbs={[{ name: "Mentions légales", href: "/mentions-legales" }]} title="Mentions légales" image={{ src: "/images/mentions-legales-document-sceau.svg", alt: "Illustration d'un document officiel avec un sceau" }} />
       <section className="section">
         <div className="container-page prose-measure space-y-10">
           <p className="rounded-lg border-2 border-orange bg-mist p-4 text-sm">
