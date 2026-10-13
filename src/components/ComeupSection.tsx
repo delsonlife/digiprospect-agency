@@ -10,7 +10,7 @@ export function ComeupSection() {
             <div className="tricolor absolute inset-x-0 top-0" />
             <p className="font-display text-[clamp(3.5rem,9vw,6rem)] font-bold leading-none">{comeup.figure}</p>
             <p className="mt-4 text-lg text-white/75">{comeup.figureLabel}</p>
-            <dl className="mt-8 grid grid-cols-2 gap-6 border-t border-white/15 pt-6">
+            <dl className="mt-8 border-t border-white/15 pt-6">
               {comeup.stats.map((s) => (
                 <div key={s.label}>
                   <dd className="font-display text-3xl font-bold">{s.value}</dd>
