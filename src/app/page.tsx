@@ -44,13 +44,13 @@ export default function HomePage() {
           <div>
             <p className="hero-draw flex items-center gap-3 text-[0.95rem] font-semibold text-ink-soft">
               <span className="tricolor-sm" aria-hidden="true" />
-              {site.name}, Abidjan
+              {site.name}
             </p>
             <h1 className="hero-draw mt-6 text-hero">
-              Agence web à Abidjan et en Côte d'Ivoire : des sites clairs qui transforment vos visiteurs en demandes de devis
+              Agence web à Abidjan et en Côte d'Ivoire : donnez à votre entreprise une présence en ligne qui inspire confiance
             </h1>
             <p className="hero-draw prose-measure mt-6 text-lg text-ink-soft sm:text-xl">
-              Création de sites web, boutiques en ligne et référencement local pour les entreprises de Côte d'Ivoire et d'ailleurs. Un interlocuteur, un travail soigné, aucune promesse irréaliste.
+              Des sites web professionnels, des boutiques en ligne et du référencement local pour aider votre entreprise à mieux présenter ses services et à développer sa visibilité.
             </p>
             <div className="hero-draw mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact" className="btn btn-primary">Demander un devis</Link>
@@ -166,7 +166,7 @@ export default function HomePage() {
           <div>
             <h2 className="text-h2">Un service ouvert à toute la Côte d'Ivoire, et au-delà</h2>
             <p className="prose-measure mt-5 text-ink-soft">
-              DigiProspect Agency est basée à Abidjan et accompagne des entreprises dans toutes les villes et régions du pays. Pour une entreprise située à l'étranger, le projet se mène à distance.
+              DigiProspect Agency accompagne des entreprises à Abidjan, dans toutes les villes et régions du pays, et à distance pour celles situées à l'étranger.
             </p>
             <Link href="/zones-intervention" className="link-underline mt-6 inline-block font-semibold">Voir les zones d'intervention</Link>
           </div>

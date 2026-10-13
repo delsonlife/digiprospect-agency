@@ -205,7 +205,7 @@ export const services: Service[] = [
 export const homeFaq: Faq[] = [
   {
     q: "Intervenez-vous en dehors d'Abidjan ?",
-    a: "Oui. DigiProspect Agency est basée à Abidjan et accompagne des entreprises dans toute la Côte d'Ivoire. Pour une entreprise située à l'étranger, le projet se mène à distance.",
+    a: "Oui. DigiProspect Agency accompagne des entreprises à Abidjan comme dans le reste de la Côte d'Ivoire. Pour une entreprise située à l'étranger, le projet se mène à distance.",
   },
   {
     q: "Quels types de projets prenez-vous en charge ?",

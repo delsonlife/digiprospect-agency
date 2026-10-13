@@ -34,7 +34,7 @@ export default function Page() {
               Le nom dit l'objectif : un site utile se juge à ce qu'il apporte à l'entreprise, pas seulement à son apparence. Chaque projet commence par une question simple : qui doit vous trouver, et que doit-il faire ensuite ?
             </p>
             <p className="prose-measure mt-4 text-lg text-ink-soft">
-              {site.name} est basée à Abidjan et intervient partout en Côte d'Ivoire, ainsi qu'à distance à l'international, sur trois sujets : le site web, la boutique en ligne et le référencement local.
+              {site.name} intervient à Abidjan et partout en Côte d'Ivoire, ainsi qu'à distance à l'international, sur trois sujets : le site web, la boutique en ligne et le référencement local.
             </p>
             {/* TODO : ajouter ici une courte présentation personnelle (parcours, spécialités) et une photo réelle. */}
           </div>
@@ -48,7 +48,7 @@ export default function Page() {
           </ul>
         </div>
       </section>
-      <ComeupSection showAboutLink={false} />
+      <ComeupSection />
       <CtaBand />
     </>
   );

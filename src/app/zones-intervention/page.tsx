@@ -7,7 +7,7 @@ import { communes } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Zones d'intervention : Côte d'Ivoire et à distance",
   description:
-    "DigiProspect Agency, basée à Abidjan, accompagne les entreprises de toute la Côte d'Ivoire et, à distance, les entreprises situées à l'étranger.",
+    "DigiProspect Agency accompagne les entreprises d'Abidjan et de toute la Côte d'Ivoire et, à distance, les entreprises situées à l'étranger.",
   alternates: { canonical: "/zones-intervention" },
 };
 
@@ -17,7 +17,7 @@ export default function Page() {
       <PageHero
         crumbs={[{ name: "Zones d'intervention", href: "/zones-intervention" }]}
         title="Un service ouvert à toute la Côte d'Ivoire et à l'international"
-        intro="DigiProspect Agency est basée à Abidjan. Les projets se mènent partout en Côte d'Ivoire, et à distance pour les entreprises situées à l'étranger."
+        intro="Les projets se mènent à Abidjan et partout en Côte d'Ivoire, et à distance pour les entreprises situées à l'étranger."
         image={{ src: "/images/zones-intervention-schema-reseau.svg", alt: "Schéma abstrait de points reliés représentant des zones d'intervention, sans valeur cartographique" }}
       />
       <section className="section">
