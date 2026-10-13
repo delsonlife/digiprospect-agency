@@ -17,9 +17,7 @@ export default function Page() {
       <PageHero crumbs={[{ name: "Mentions légales", href: "/mentions-legales" }]} title="Mentions légales" image={{ src: "/images/mentions-legales-document-sceau.svg", alt: "Illustration d'un document officiel avec un sceau" }} />
       <section className="section">
         <div className="container-page prose-measure space-y-10">
-          <p className="rounded-lg border-2 border-orange bg-mist p-4 text-sm">
-            Les passages marqués <span className={todo}>[À COMPLÉTER]</span> doivent être renseignés avec vos informations réelles avant la mise en ligne définitive. Faites relire cette page par un professionnel du droit si nécessaire.
-          </p>
+          {/* À FAIRE avant publication : renseigner les passages [À COMPLÉTER], faire relire par un professionnel du droit, puis passer robots.index à true. */}
           <div>
             <h2 className="text-h3 font-bold">Éditeur du site</h2>
             <ul className="mt-3 space-y-1 text-ink-soft">

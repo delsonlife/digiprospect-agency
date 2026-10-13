@@ -43,8 +43,8 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
             <div>
               <h2 className="text-h3 font-bold">Ce qui se passe ensuite</h2>
               <ol className="mt-4 space-y-3 text-ink-soft">
-                <li>Votre demande est lue et les questions utiles sont préparées.</li>
-                <li>Un échange a lieu par WhatsApp, téléphone ou rendez-vous, selon votre préférence.</li>
+                <li>Vous recevez une réponse avec, si besoin, quelques questions pour préciser votre projet.</li>
+                <li>Un échange a lieu à distance ou lors d'un rendez-vous convenu à l'avance, selon votre localisation.</li>
                 <li>Vous recevez une proposition écrite que vous êtes libre d'accepter ou non.</li>
               </ol>
             </div>

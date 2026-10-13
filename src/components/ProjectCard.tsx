@@ -5,9 +5,9 @@ export function ProjectCard({ project }: { project: Project }) {
     <article className="flex flex-col overflow-hidden rounded-2xl border border-line bg-white">
       {project.image ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={project.image} alt={project.imageAlt ?? `Aperçu du projet ${project.name}`} loading="lazy" decoding="async" className="aspect-[16/10] w-full object-cover" />
+        <img src={project.image} alt={project.imageAlt ?? `Aperçu du projet ${project.name}`} width={1200} height={560} loading="lazy" decoding="async" className="aspect-[21/10] w-full border-b border-line object-cover object-left-top" />
       ) : (
-        <div className="aspect-[16/10] w-full bg-mist" aria-hidden="true" />
+        <div className="aspect-[21/10] w-full bg-mist" aria-hidden="true" />
       )}
       <div className="flex flex-1 flex-col p-6">
         <p className="text-sm font-semibold text-orange-deep">{project.type}</p>

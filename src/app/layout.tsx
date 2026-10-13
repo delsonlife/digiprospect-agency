@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | DigiProspect Agency",
   },
   description:
-    "DigiProspect Agency crée des sites web professionnels, des boutiques en ligne et accompagne le référencement local des entreprises en Côte d'Ivoire et à l'international, depuis Abidjan.",
+    "DigiProspect Agency crée des sites web professionnels, des boutiques en ligne et accompagne le référencement local des entreprises en Côte d'Ivoire et à l'international.",
   applicationName: site.name,
   alternates: { canonical: "/" },
   openGraph: {

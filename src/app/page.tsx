@@ -23,16 +23,16 @@ const method = [
   { title: "Échange et cadrage", text: "Vous décrivez votre activité et votre objectif. Le cadrage fixe ce qui est utile, et ce qui peut attendre." },
   { title: "Proposition écrite", text: "Pages, fonctionnalités, contenus à fournir et prix : tout est posé avant de commencer." },
   { title: "Réalisation et validation", text: "Vous voyez le travail avancer et validez chaque étape avant la mise en ligne." },
-  { title: "Mise en ligne et suivi", text: "Déploiement, vérifications techniques, déclaration à Google, puis ajustements." },
+  { title: "Mise en ligne et suivi", text: "Mise en ligne, vérifications avant l'ouverture, déclaration du site à Google, puis ajustements." },
 ];
 
 const included = [
   "Version mobile pensée en premier",
   "Titres, descriptions et structure prêts pour le référencement",
-  "Formulaire de devis qui transmet réellement les demandes",
+  "Formulaire de contact qui vous envoie les demandes par e-mail",
   "Bouton WhatsApp et liens de contact visibles",
-  "Pages légales à compléter avec vos informations",
-  "Sitemap, balises de partage et configuration Google Search Console",
+  "Mentions légales et politique de confidentialité",
+  "Aperçu soigné lors du partage du site et suivi de sa visibilité avec Google Search Console",
 ];
 
 export default function HomePage() {
@@ -114,7 +114,7 @@ export default function HomePage() {
           <div>
             <h2 className="text-h2">Chaque projet repose sur les mêmes bases</h2>
             <p className="prose-measure mt-5 text-ink-soft">
-              Ce qui compte pour un visiteur, un client ou Google doit être en place dès la livraison, pas ajouté plus tard.
+              Ce qui compte pour vos visiteurs et pour votre visibilité en ligne est prévu dès le départ, pas ajouté après coup. Le contenu exact de chaque projet est précisé dans le devis.
             </p>
           </div>
           <ul className="space-y-4">
@@ -164,7 +164,7 @@ export default function HomePage() {
       <section className="border-y border-line bg-mist">
         <div className="container-page section grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
           <div>
-            <h2 className="text-h2">Un service ouvert à toute la Côte d'Ivoire, et au-delà</h2>
+            <h2 className="text-h2">Des services web accessibles où que se trouve votre entreprise</h2>
             <p className="prose-measure mt-5 text-ink-soft">
               DigiProspect Agency accompagne des entreprises à Abidjan, dans toutes les villes et régions du pays, et à distance pour celles situées à l'étranger.
             </p>

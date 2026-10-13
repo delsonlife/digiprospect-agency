@@ -58,7 +58,7 @@ git push -u origin main
 
 ## Où modifier le contenu
 - Services, FAQ : `src/content/services.ts`
-- Réalisations et avis : `src/content/projects.ts` (listes vides tant qu'aucun projet ou avis réel n'est ajouté ; les sections correspondantes de l'accueil sont alors masquées). Mettez les captures dans `public/projets/`.
+- Réalisations et avis : `src/content/projects.ts` (7 réalisations déclarées ; liste d'avis vide tant qu'aucun avis réel n'est ajouté, la section correspondante de l'accueil est alors masquée). Les captures sont dans `public/projets/` (WebP, 1200 px de large). Pour ajouter le lien d'un site en ligne, renseignez le champ `url` du projet.
 - Coordonnées, communes, messages WhatsApp : `src/lib/site.ts`
 - Mentions légales et confidentialité : `src/app/mentions-legales` et `src/app/politique-de-confidentialite` (passages `[À COMPLÉTER]`). Ces deux pages sont en `noindex` : passez `index` à `true` une fois complétées, et ajoutez-les au sitemap.
 

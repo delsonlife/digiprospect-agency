@@ -34,7 +34,7 @@ export function Footer() {
         <div>
           <h2 className="font-display text-base font-bold text-white">Contact</h2>
           <ul className="mt-4 space-y-3 text-[0.95rem]">
-            <li className="flex items-center gap-3"><Icon name="pin" size={20} className="shrink-0" />Entreprises d'Abidjan et de {site.country}</li>
+            <li className="flex items-center gap-3"><Icon name="pin" size={20} className="shrink-0" />{site.country} et à distance</li>
             <li>
               <a href={whatsappLink("Bonjour, je vous contacte depuis le site DigiProspect Agency.")} target="_blank" rel="noopener noreferrer"
                  className="flex items-center gap-3 py-1 hover:text-white">

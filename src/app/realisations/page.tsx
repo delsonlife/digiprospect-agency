@@ -19,7 +19,7 @@ export default function Page() {
       <PageHero
         crumbs={[{ name: "Réalisations", href: "/realisations" }]}
         title="Réalisations"
-        intro="Des projets réels, présentés pour ce qu'ils sont : le travail effectué pour le client, sans chiffres inventés."
+        intro="Une sélection de sites et de boutiques en ligne réalisés pour des entreprises et des structures de secteurs variés."
       />
       <section className="section">
         <div className="container-page">

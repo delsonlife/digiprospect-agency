@@ -17,9 +17,7 @@ export default function Page() {
       <PageHero crumbs={[{ name: "Confidentialité", href: "/politique-de-confidentialite" }]} title="Politique de confidentialité" image={{ src: "/images/politique-confidentialite-donnees-protegees.svg", alt: "Illustration d'un bouclier avec cadenas symbolisant la protection des données" }} />
       <section className="section">
         <div className="container-page prose-measure space-y-10">
-          <p className="rounded-lg border-2 border-orange bg-mist p-4 text-sm">
-            Les passages marqués <span className={todo}>[À COMPLÉTER]</span> sont à renseigner avant la mise en ligne définitive. Faites vérifier ce texte au regard de la réglementation ivoirienne sur la protection des données personnelles.
-          </p>
+          {/* À FAIRE avant publication : renseigner les passages [À COMPLÉTER], faire relire par un professionnel du droit, puis passer robots.index à true. */}
           <div>
             <h2 className="text-h3 font-bold">Responsable du traitement</h2>
             <p className="mt-3 text-ink-soft">{site.name}, <span className={todo}>[À COMPLÉTER : identité de l'éditeur, voir mentions légales]</span>.</p>
