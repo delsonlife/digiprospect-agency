@@ -95,5 +95,44 @@ export const projects: Project[] = [
  * Avis clients authentiques (profil ComeUp ou autre source vérifiable).
  * Laisser vide tant qu'aucun avis réel n'est disponible.
  */
-export type Review = { author: string; text: string; source: string; sourceUrl?: string };
-export const reviews: Review[] = [];
+export type Review = {
+  author: string;
+  text: string;
+  source: string;
+  sourceUrl?: string;
+  /** Date de l'avis au format AAAA-MM-JJ, telle qu'affichée sur la source. */
+  date?: string;
+  /** true si le texte est un extrait de l'avis complet. */
+  excerpt?: boolean;
+};
+
+/**
+ * Avis relevés sur le profil ComeUp (textes reproduits tels quels, dates vérifiées sur le profil).
+ */
+export const reviews: Review[] = [
+  {
+    author: "Quentin_LCM",
+    text: "Dany est très compétent, ultra réactif, et il explique bien tout ce qu'il fait. Au plaisir de retravailler avec toi !",
+    source: "ComeUp",
+    date: "2026-09-27",
+  },
+  {
+    author: "TheMTFK",
+    text: "Comme d'habitude qualité et rapidité incroyable, Danny est impressionnant, merci encore !",
+    source: "ComeUp",
+    date: "2026-08-12",
+  },
+  {
+    author: "Axia_Ecom",
+    text: "J'ai sélectionné le Pack Premium pour l'optimisation de la vitesse de ma boutique Shopify, et le résultat est tout simplement remarquable. Je recommande vivement Dany : c'est un prestataire d'une fiabilité rare, extrêmement disponible et véritablement à l'écoute.",
+    source: "ComeUp",
+    date: "2026-07-09",
+    excerpt: true,
+  },
+  {
+    author: "ViolaineDelhomme",
+    text: "Reactif et super résultat ! merci",
+    source: "ComeUp",
+    date: "2026-06-30",
+  },
+];

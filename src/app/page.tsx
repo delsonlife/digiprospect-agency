@@ -6,7 +6,8 @@ import { Faq } from "@/components/Faq";
 import { HeroIllustration } from "@/components/HeroIllustration";
 import { Icon, type IconName } from "@/components/Icon";
 import { ProjectCard } from "@/components/ProjectCard";
-import { projects, reviews } from "@/content/projects";
+import { ReviewsSection } from "@/components/ReviewsSection";
+import { projects } from "@/content/projects";
 import { homeFaq, services } from "@/content/services";
 import { site } from "@/lib/site";
 
@@ -109,6 +110,8 @@ export default function HomePage() {
 
       <ComeupSection />
 
+      <ReviewsSection />
+
       <section className="section">
         <div className="container-page grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
@@ -142,24 +145,6 @@ export default function HomePage() {
           </ol>
         </div>
       </section>
-
-      {reviews.length > 0 && (
-        <section className="section">
-          <div className="container-page">
-            <h2 className="text-h2">Avis de clients</h2>
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-              {reviews.slice(0, 2).map((r) => (
-                <figure key={r.author + r.text.slice(0, 12)} className="rounded-2xl border border-line p-7">
-                  <blockquote className="text-lg">{r.text}</blockquote>
-                  <figcaption className="mt-4 text-sm text-ink-soft">
-                    {r.author}, via {r.sourceUrl ? <a className="link-underline" href={r.sourceUrl} target="_blank" rel="noopener noreferrer">{r.source}</a> : r.source}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       <section className="border-y border-line bg-mist">
         <div className="container-page section grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
