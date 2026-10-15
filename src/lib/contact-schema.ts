@@ -2,7 +2,7 @@ export const serviceOptions = [
   "Création de site web",
   "Refonte de site existant",
   "Boutique en ligne",
-  "SEO et référencement local",
+  "Optimisation de fiche Google Business Profile",
   "Autre besoin",
 ] as const;
 

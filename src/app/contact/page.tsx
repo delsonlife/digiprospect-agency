@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const preset: Record<string, string> = {
   "creation-site-web": "Création de site web",
   "creation-site-ecommerce": "Boutique en ligne",
-  "seo-referencement-local": "SEO et référencement local",
+  "seo-referencement-local": "Optimisation de fiche Google Business Profile",
 };
 
 export default async function Page({ searchParams }: { searchParams: Promise<{ service?: string }> }) {

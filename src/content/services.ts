@@ -1,3 +1,5 @@
+import { gbp } from "./gbp";
+
 export type Faq = { q: string; a: string };
 
 export type Service = {
@@ -140,61 +142,22 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "seo-referencement-local",
-    image: { src: "/images/referencement-local-abidjan-resultats-recherche.svg", alt: "Illustration d'une recherche Google avec résultats et repère de localisation sur une carte" },
-    path: "/seo-referencement-local",
-    name: "SEO et référencement local",
-    short: "Optimisation technique et éditoriale, visibilité organique et accompagnement Google Business Profile si éligible.",
-    title: "Agence SEO à Abidjan et en Côte d'Ivoire : référencement naturel et local",
-    description:
-      "Référencement naturel et local à Abidjan et en Côte d'Ivoire : audit technique, optimisation des pages, contenus utiles et accompagnement Google Business Profile si éligible. Sans promesse de position.",
-    h1: "Référencement naturel et local à Abidjan et en Côte d'Ivoire : être trouvé par vos clients",
-    intro:
-      "Le référencement consiste à rendre votre site compréhensible pour Google et utile pour vos visiteurs. DigiProspect Agency commence par comprendre ce que vos clients recherchent, puis améliore ce qui freine la visibilité de votre site.",
-    problem:
-      "Votre entreprise existe, mais quand un client cherche votre service dans votre ville, il tombe sur vos concurrents. Souvent, le site manque de pages claires, de titres adaptés, de vitesse ou d'informations cohérentes sur Internet.",
-    benefits: [
-      "Un diagnostic précis de ce qui bloque la visibilité de votre site.",
-      "Des pages qui répondent aux vraies recherches de vos clients.",
-      "Une fiche Google Business Profile cohérente avec votre site, lorsque votre activité y est éligible.",
-      "Un suivi simple : ce qui a été fait, pourquoi, et ce qui reste à faire.",
-    ],
-    includes: [
-      "Audit technique : pages connues de Google, vitesse, structure, titres et descriptions, version mobile",
-      "Recherche de mots-clés et analyse des intentions de recherche",
-      "Optimisation des titres, descriptions et contenus existants",
-      "Création ou amélioration de pages utiles à vos visiteurs",
-      "Accompagnement Google Business Profile si l'entreprise est éligible",
-      "Mise en place de Google Search Console et recommandations de suivi",
-    ],
-    steps: [
-      { title: "Audit", text: "État du site, pages indexées, concurrents visibles sur vos recherches principales." },
-      { title: "Priorités", text: "Liste courte des actions qui ont le plus de chances d'aider votre site." },
-      { title: "Mise en œuvre", text: "Corrections techniques, réécriture des titres, création ou amélioration des pages." },
-      { title: "Présence locale", text: "Vérification de la cohérence de vos informations et préparation de la fiche Google, si éligible." },
-      { title: "Suivi", text: "Lecture des données Search Console et ajustements dans la durée." },
-    ],
-    needed: [
-      "L'adresse de votre site actuel, s'il existe",
-      "Les services pour lesquels vous voulez être trouvé",
-      "Les villes et zones où se trouvent vos clients",
-      "Un accès à Google Search Console ou la possibilité de le créer avec vous",
-    ],
-    quoteLabel: "Demander un audit SEO",
-    faq: [
-      {
-        q: "Combien de temps faut-il pour voir des résultats ?",
-        a: "Cela varie selon l'état du site et la concurrence. Le référencement naturel est un travail dans la durée, et aucun délai ne peut être garanti honnêtement.",
-      },
-      {
-        q: "Pouvez-vous me placer en première position ?",
-        a: "Non. Aucun prestataire ne peut garantir une position précise sur Google. DigiProspect Agency travaille sur ce qui est maîtrisable : technique, contenu, cohérence des informations.",
-      },
-      {
-        q: "Ai-je droit à une fiche Google Business Profile ?",
-        a: "Cela dépend de vos conditions d'exercice : Google attend notamment un contact réel avec les clients, et applique des règles propres aux entreprises sans local ouvert au public. L'éligibilité est vérifiée avant toute démarche.",
-      },
-    ],
+    slug: gbp.slug,
+    path: gbp.path,
+    name: gbp.name,
+    short: gbp.short,
+    title: gbp.title,
+    description: gbp.description,
+    h1: gbp.h1,
+    image: gbp.image,
+    intro: gbp.intro,
+    problem: gbp.why.join(" "),
+    benefits: gbp.whyPoints,
+    includes: gbp.cards.map((c) => c.title),
+    steps: gbp.steps,
+    needed: gbp.needed.items,
+    faq: gbp.faq,
+    quoteLabel: gbp.quoteLabel,
   },
 ];
 
@@ -205,7 +168,7 @@ export const homeFaq: Faq[] = [
   },
   {
     q: "Quels types de projets prenez-vous en charge ?",
-    a: "Création et refonte de sites vitrines, boutiques en ligne, et optimisation pour le référencement naturel et local. Si votre besoin sort de ce cadre, l'agence le précise avant de commencer.",
+    a: "Création et refonte de sites vitrines, boutiques en ligne, et optimisation et suivi de fiches Google Business Profile. Si votre besoin sort de ce cadre, l'agence le précise avant de commencer.",
   },
   {
     q: "Comment se passe une demande de devis ?",
