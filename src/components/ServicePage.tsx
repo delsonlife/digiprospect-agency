@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CtaBand } from "./CtaBand";
+import { FeatureCards } from "./FeatureCards";
 import { Faq } from "./Faq";
 import { Icon } from "./Icon";
 import { JsonLd } from "./JsonLd";
@@ -37,11 +38,7 @@ export function ServicePage({ service, related }: { service: Service; related: S
       <section className="border-y border-line bg-mist">
         <div className="container-page section">
           <h2 className="text-h2">Ce que comprend la prestation</h2>
-          <ul className="mt-10 grid gap-x-12 gap-y-0 sm:grid-cols-2">
-            {service.includes.map((item) => (
-              <li key={item} className="border-b border-line py-4">{item}</li>
-            ))}
-          </ul>
+          <div className="mt-10"><FeatureCards items={service.includes} cols={3} /></div>
           <p className="mt-6 text-sm text-ink-soft">Le contenu exact est précisé dans le devis, selon votre activité et votre budget.</p>
         </div>
       </section>

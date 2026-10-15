@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { ComeupSection } from "@/components/ComeupSection";
 import { Faq } from "@/components/Faq";
+import { FeatureCards, type Feature } from "@/components/FeatureCards";
 import { HeroIllustration } from "@/components/HeroIllustration";
 import { Icon, type IconName } from "@/components/Icon";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -27,13 +28,13 @@ const method = [
   { title: "Mise en ligne et suivi", text: "Mise en ligne, vérifications avant l'ouverture, déclaration du site à Google, puis ajustements." },
 ];
 
-const included = [
-  "Version mobile pensée en premier",
-  "Titres, descriptions et structure prêts pour le référencement",
-  "Formulaire de contact qui vous envoie les demandes par e-mail",
-  "Bouton WhatsApp et liens de contact visibles",
-  "Mentions légales et politique de confidentialité",
-  "Aperçu soigné lors du partage du site et suivi de sa visibilité avec Google Search Console",
+const bases: Feature[] = [
+  { icon: "phone", title: "Mobile d'abord", text: "Une version mobile pensée en premier, pour les visiteurs qui vous consultent depuis leur téléphone." },
+  { icon: "search", title: "Prêt pour Google", text: "Titres, descriptions et structure des pages pensés pour le référencement." },
+  { icon: "mail", title: "Formulaire de contact", text: "Les demandes de vos visiteurs vous parviennent directement par e-mail." },
+  { icon: "whatsapp", title: "Contact visible", text: "Bouton WhatsApp et liens de contact bien placés sur chaque page." },
+  { icon: "text", title: "Mentions légales", text: "Mentions légales et politique de confidentialité prévues dès la livraison." },
+  { icon: "link", title: "Visibilité suivie", text: "Aperçu soigné lors du partage du site et suivi de sa visibilité avec Google Search Console." },
 ];
 
 export default function HomePage() {
@@ -112,22 +113,15 @@ export default function HomePage() {
 
       <ReviewsSection />
 
-      <section className="section">
-        <div className="container-page grid gap-12 lg:grid-cols-2 lg:gap-20">
-          <div>
+      <section className="border-y border-line bg-mist">
+        <div className="container-page section">
+          <div className="max-w-3xl">
             <h2 className="text-h2">Chaque projet repose sur les mêmes bases</h2>
             <p className="prose-measure mt-5 text-ink-soft">
               Ce qui compte pour vos visiteurs et pour votre visibilité en ligne est prévu dès le départ, pas ajouté après coup. Le contenu exact de chaque projet est précisé dans le devis.
             </p>
           </div>
-          <ul className="space-y-4">
-            {included.map((item) => (
-              <li key={item} className="flex gap-4 border-b border-line pb-4">
-                <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-deep text-white"><Icon name="check" size={16} strokeWidth={3} /></span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-10"><FeatureCards items={bases} cols={3} /></div>
         </div>
       </section>
 

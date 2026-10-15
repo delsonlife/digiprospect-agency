@@ -1,3 +1,4 @@
+import type { Feature } from "@/components/FeatureCards";
 import { gbp } from "./gbp";
 
 export type Faq = { q: string; a: string };
@@ -14,7 +15,7 @@ export type Service = {
   intro: string;
   problem: string;
   benefits: string[];
-  includes: string[];
+  includes: Feature[];
   steps: { title: string; text: string }[];
   needed: string[];
   faq: Faq[];
@@ -43,12 +44,12 @@ export const services: Service[] = [
       "Une base technique propre pour le référencement : titres, structure des pages, vitesse et plan du site.",
     ],
     includes: [
-      "Site vitrine multi-pages ou page unique selon votre besoin",
-      "Refonte d'un site existant, avec reprise des contenus utiles",
-      "Design sur mesure, cohérent avec votre identité",
-      "Formulaire de contact qui envoie les demandes par e-mail",
-      "Bouton WhatsApp, liens de contact et pages légales",
-      "Configuration de base du référencement et mise en ligne",
+      { icon: "browser", title: "Site vitrine sur mesure", text: "Site multi-pages ou page unique, selon votre activité et vos objectifs." },
+      { icon: "refresh", title: "Refonte de site existant", text: "Reprise des contenus utiles et amélioration de la présentation." },
+      { icon: "grid", title: "Design sur mesure", text: "Mise en page cohérente avec votre identité, lisible sur téléphone comme sur ordinateur." },
+      { icon: "mail", title: "Formulaire de contact", text: "Les demandes de vos visiteurs vous parviennent directement par e-mail." },
+      { icon: "whatsapp", title: "Contact et pages légales", text: "Bouton WhatsApp, liens de contact visibles, mentions légales et politique de confidentialité." },
+      { icon: "search", title: "Bases du référencement", text: "Titres, descriptions et plan du site, déclaration à Google, puis mise en ligne." },
     ],
     steps: [
       { title: "Cadrage", text: "Définition de votre activité, de vos clients cibles, de vos pages et de l'objectif principal du site." },
@@ -105,12 +106,12 @@ export const services: Service[] = [
       "Une boutique que vous pouvez mettre à jour vous-même après la livraison.",
     ],
     includes: [
-      "Pages produits et catégories",
-      "Parcours de commande et récapitulatif",
-      "Options de paiement et de livraison à définir avec vous selon votre activité",
-      "Version mobile soignée pour les achats depuis un téléphone",
-      "Bouton WhatsApp pour les questions avant achat",
-      "Prise en main pour ajouter et modifier vos produits",
+      { icon: "grid", title: "Catalogue et catégories", text: "Pages produits et catégories claires, pour que vos clients trouvent ce qu'ils cherchent." },
+      { icon: "cart", title: "Parcours de commande", text: "Panier, commande et récapitulatif simples à suivre, y compris sur téléphone." },
+      { icon: "card", title: "Paiement et livraison", text: "Options définies avec vous, selon votre activité et la solution retenue." },
+      { icon: "phone", title: "Version mobile soignée", text: "Une boutique agréable à utiliser pour les achats depuis un téléphone." },
+      { icon: "whatsapp", title: "WhatsApp avant achat", text: "Un bouton pour poser une question avant de commander." },
+      { icon: "plus", title: "Prise en main", text: "Explications pour ajouter et modifier vos produits vous-même." },
     ],
     steps: [
       { title: "Analyse de votre vente", text: "Produits, zones de livraison, moyens d'encaissement, volume de commandes attendu." },
@@ -153,7 +154,7 @@ export const services: Service[] = [
     intro: gbp.intro,
     problem: gbp.why.join(" "),
     benefits: gbp.whyPoints,
-    includes: gbp.cards.map((c) => c.title),
+    includes: gbp.cards,
     steps: gbp.steps,
     needed: gbp.needed.items,
     faq: gbp.faq,

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
+import { FeatureCards } from "@/components/FeatureCards";
 import { Faq } from "@/components/Faq";
 import { Icon } from "@/components/Icon";
 import { JsonLd } from "@/components/JsonLd";
@@ -13,12 +14,6 @@ export const metadata: Metadata = {
   description: gbp.description,
   alternates: { canonical: gbp.path },
   openGraph: { title: gbp.title, description: gbp.description, url: gbp.path },
-};
-
-const scopeStyle: Record<string, string> = {
-  "Optimisation initiale": "text-orange-deep",
-  Conseils: "text-ink-soft",
-  Suivi: "text-green-deep",
 };
 
 export default function Page() {
@@ -51,16 +46,7 @@ export default function Page() {
       <section className="border-y border-line bg-mist">
         <div className="container-page section">
           <h2 className="text-h2">{gbp.cardsTitle}</h2>
-          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {gbp.cards.map((c) => (
-              <li key={c.title} className="flex flex-col rounded-2xl border border-line bg-white p-6">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-ink text-white"><Icon name={c.icon} /></span>
-                <p className={`mt-5 text-sm font-semibold ${scopeStyle[c.scope]}`}>{c.scope}</p>
-                <h3 className="mt-1 text-xl font-bold">{c.title}</h3>
-                <p className="mt-3 text-[0.97rem] text-ink-soft">{c.text}</p>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-10"><FeatureCards items={gbp.cards} cols={4} /></div>
           <p className="prose-measure mt-8 text-sm text-ink-soft">{gbp.cardsNote}</p>
         </div>
       </section>
