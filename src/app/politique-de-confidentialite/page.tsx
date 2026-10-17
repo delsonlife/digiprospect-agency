@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Politique de confidentialité",
   description: "Données collectées par le formulaire de devis de digiprospectagency.com et leur usage.",
-  alternates: { canonical: "/politique-de-confidentialite" },
-  robots: { index: false, follow: true }, // passer à true une fois les informations complétées
-};
+  path: "/politique-de-confidentialite",
+  noindex: true, // passer à false une fois les informations complétées
+});
 
 const todo = "text-orange-deep font-semibold";
 

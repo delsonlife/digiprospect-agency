@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { ContactForm } from "@/components/ContactForm";
 import { Icon } from "@/components/Icon";
 import { PageHero } from "@/components/PageHero";
 import { site, whatsappLink } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Demande de devis et contact",
-  description: "Demandez un devis pour un site web, une boutique en ligne ou du référencement local, en Côte d'Ivoire ou à distance. Réponse par e-mail ou WhatsApp.",
-  alternates: { canonical: "/contact" },
-};
+  description: "Demandez un devis pour un site internet, une boutique en ligne ou l'optimisation de votre fiche Google. Réponse par e-mail ou WhatsApp.",
+  path: "/contact",
+});
 
 const preset: Record<string, string> = {
   "creation-site-web": "Création de site web",

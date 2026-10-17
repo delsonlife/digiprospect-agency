@@ -36,7 +36,7 @@ export function Header() {
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-white">
+    <header className="sticky top-0 z-[55] border-b border-line bg-white">
       <div className="tricolor" />
       <div className="container-page flex h-[4.25rem] items-center justify-between gap-6">
         <Logo />

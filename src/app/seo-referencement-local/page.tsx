@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { FeatureCards } from "@/components/FeatureCards";
@@ -9,12 +10,7 @@ import { PageHero } from "@/components/PageHero";
 import { gbp } from "@/content/gbp";
 import { SITE_URL, whatsappMessages } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: gbp.title,
-  description: gbp.description,
-  alternates: { canonical: gbp.path },
-  openGraph: { title: gbp.title, description: gbp.description, url: gbp.path },
-};
+export const metadata: Metadata = pageMetadata({ title: gbp.title, description: gbp.description, path: gbp.path, absoluteTitle: true });
 
 export default function Page() {
   return (

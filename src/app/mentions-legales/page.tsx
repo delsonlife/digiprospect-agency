@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Mentions légales",
   description: "Mentions légales du site digiprospectagency.com.",
-  alternates: { canonical: "/mentions-legales" },
-  robots: { index: false, follow: true }, // passer à true une fois les informations complétées
-};
+  path: "/mentions-legales",
+  noindex: true, // passer à false une fois les informations complétées
+});
 
 const todo = "text-orange-deep font-semibold";
 

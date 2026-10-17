@@ -8,9 +8,9 @@ export const gbp = {
   name: "Optimisation de fiche Google Business Profile",
   short:
     "Optimisation et suivi de votre fiche Google pour être mieux trouvé sur Google Maps et dans les recherches locales.",
-  title: "Optimisation de fiche Google Business Profile",
+  title: "SEO local Côte d'Ivoire : optimisation fiche Google",
   description:
-    "Optimisation et suivi de fiche Google Business Profile (Google My Business) pour mieux apparaître sur Google Maps et en recherche locale. Devis sur demande.",
+    "SEO local en Côte d'Ivoire : optimisation et suivi de fiche Google Business Profile (Google My Business) pour mieux apparaître sur Google Maps.",
   h1: "Optimisation de fiche Google Business Profile",
   intro:
     "Votre fiche Google, anciennement Google My Business, est souvent le premier contact entre votre entreprise et un client proche. DigiProspect Agency l'examine, l'améliore et la suit dans la durée pour mieux présenter votre activité sur Google et Google Maps, et renforcer vos chances d'être trouvé par les clients de votre zone.",

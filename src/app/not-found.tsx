@@ -21,6 +21,7 @@ export default function NotFound() {
           alt="Illustration d'une fenêtre de navigateur affichant une erreur 404"
           width={520}
           height={420}
+          loading="lazy"
           decoding="async"
           className="mx-auto h-auto w-full max-w-[22rem]"
         />

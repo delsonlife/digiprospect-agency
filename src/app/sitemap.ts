@@ -14,5 +14,6 @@ const pages: { path: string; priority: number }[] = [
 
 // Les pages légales sont en noindex tant qu'elles ne sont pas complétées : elles ne figurent pas ici.
 export default function sitemap(): MetadataRoute.Sitemap {
-  return pages.map((p) => ({ url: `${SITE_URL}${p.path}`, priority: p.priority }));
+  const lastModified = new Date();
+  return pages.map((p) => ({ url: `${SITE_URL}${p.path}`, lastModified, priority: p.priority }));
 }

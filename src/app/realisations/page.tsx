@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { Icon } from "@/components/Icon";
@@ -7,11 +8,11 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { projects } from "@/content/projects";
 import { site, whatsappLink } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Réalisations : sites web et projets digitaux",
-  description: "Projets réalisés par DigiProspect Agency : sites web, boutiques en ligne et missions de référencement pour des entreprises en Côte d'Ivoire et à l'international.",
-  alternates: { canonical: "/realisations" },
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Réalisations : sites web et e-commerce",
+  description: "Sites web et boutiques en ligne réalisés pour des entreprises en Côte d'Ivoire et à l'international : YEDEI, Medilo, Mondial Tempo.",
+  path: "/realisations",
+});
 
 export default function Page() {
   return (
@@ -25,7 +26,7 @@ export default function Page() {
         <div className="container-page">
           {projects.length > 0 ? (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {projects.map((p) => <ProjectCard key={p.slug} project={p} />)}
+              {projects.map((p, i) => <ProjectCard key={p.slug} project={p} headingLevel="h2" priority={i === 0} />)}
             </div>
           ) : (
             <div className="max-w-2xl">

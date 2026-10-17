@@ -3,7 +3,10 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   async headers() {
+    const cacheImages = [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }];
     return [
+      { source: "/images/:path*", headers: cacheImages },
+      { source: "/projets/:path*", headers: cacheImages },
       {
         source: "/(.*)",
         headers: [

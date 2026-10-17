@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { ComeupSection } from "@/components/ComeupSection";
@@ -12,12 +13,12 @@ import { projects } from "@/content/projects";
 import { homeFaq, services } from "@/content/services";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: { absolute: "Agence web à Abidjan et en Côte d'Ivoire | Sites, e-commerce, SEO" },
-  description:
-    "Agence web à Abidjan et en Côte d'Ivoire : création de site web, boutique en ligne et référencement local pour entreprises. Demandez un devis pour un site clair, rapide et adapté au mobile.",
-  alternates: { canonical: "/" },
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Agence web à Abidjan | Sites, boutiques en ligne, SEO local",
+  description: "Agence web à Abidjan : création de site internet, boutique en ligne et SEO local pour les entreprises de Côte d'Ivoire. Demandez un devis.",
+  path: "/",
+  absoluteTitle: true,
+});
 
 const serviceIcons: IconName[] = ["browser", "cart", "search"];
 
@@ -44,17 +45,17 @@ export default function HomePage() {
       <section className="overflow-hidden">
         <div className="container-page grid items-center gap-12 pb-16 pt-10 lg:grid-cols-[1.15fr_1fr] lg:gap-16 lg:pb-24 lg:pt-20">
           <div>
-            <p className="hero-draw flex items-center gap-3 text-[0.95rem] font-semibold text-ink-soft">
+            <p className="flex items-center gap-3 text-[0.95rem] font-semibold text-ink-soft">
               <span className="tricolor-sm" aria-hidden="true" />
               {site.name}
             </p>
-            <h1 className="hero-draw mt-6 text-hero">
+            <h1 className="mt-6 text-hero">
               Agence web à Abidjan et en Côte d'Ivoire : donnez à votre entreprise une présence en ligne qui inspire confiance
             </h1>
-            <p className="hero-draw prose-measure mt-6 text-lg text-ink-soft sm:text-xl">
+            <p className="prose-measure mt-6 text-lg text-ink-soft sm:text-xl">
               Des sites web professionnels, des boutiques en ligne et du référencement local pour aider votre entreprise à mieux présenter ses services et à développer sa visibilité.
             </p>
-            <div className="hero-draw mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact" className="btn btn-primary">Demander un devis</Link>
               <Link href={featured.length ? "/realisations" : "#services"} className="btn btn-secondary">
                 {featured.length ? "Voir les réalisations" : "Découvrir les services"}
@@ -71,7 +72,7 @@ export default function HomePage() {
       <section id="services" className="border-t border-line bg-mist">
         <div className="container-page section grid gap-12 lg:grid-cols-[0.8fr_1.4fr] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <h2 className="text-h2">Trois services, chacun avec un objectif précis</h2>
+            <h2 className="text-h2">Création de site internet, boutique en ligne et SEO local</h2>
             <p className="prose-measure mt-5 text-ink-soft">
               Pas de catalogue interminable : seulement ce que l'agence peut réaliser et suivre sérieusement.
             </p>
@@ -84,7 +85,7 @@ export default function HomePage() {
                     <Icon name={serviceIcons[i]} />
                   </span>
                   <span>
-                    <span className="block font-display text-2xl font-bold group-hover:text-orange-deep">{s.name}</span>
+                    <h3 className="font-display text-2xl font-bold group-hover:text-orange-deep">{s.name}</h3>
                     <span className="prose-measure mt-2 block text-ink-soft">{s.short}</span>
                     <span className="link-underline mt-4 inline-block font-semibold">Voir le détail du service</span>
                   </span>

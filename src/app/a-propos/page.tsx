@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { ComeupSection } from "@/components/ComeupSection";
 import { FeatureCards, type Feature } from "@/components/FeatureCards";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "À propos de DigiProspect Agency",
-  description: "DigiProspect Agency accompagne les entreprises de Côte d'Ivoire et d'ailleurs dans leur visibilité en ligne : sites web, boutiques en ligne et référencement local.",
-  alternates: { canonical: "/a-propos" },
-};
+export const metadata: Metadata = pageMetadata({
+  title: "À propos de l'agence",
+  description: "DigiProspect Agency accompagne les entreprises de Côte d'Ivoire et d'ailleurs : sites web, boutiques en ligne et fiche Google Business Profile.",
+  path: "/a-propos",
+});
 
 const principles: Feature[] = [
   { icon: "check", title: "Dire ce qui est faisable", text: "Si un besoin sort du périmètre de l'agence ou si une promesse n'est pas tenable, DigiProspect Agency le précise avant de commencer." },

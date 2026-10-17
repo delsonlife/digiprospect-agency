@@ -29,9 +29,9 @@ export const services: Service[] = [
     path: "/creation-site-web-abidjan",
     name: "Création de sites web",
     short: "Sites vitrines, refontes et sites adaptés au mobile, pensés pour rassurer et générer des demandes.",
-    title: "Création de site web à Abidjan et en Côte d'Ivoire : vitrine, refonte",
+    title: "Création de site internet à Abidjan | Vitrine, refonte",
     description:
-      "Création et refonte de site web professionnel à Abidjan et en Côte d'Ivoire : site vitrine adapté au mobile, rapide, pensé pour le référencement et la demande de devis. Devis sur demande.",
+      "Création de site internet à Abidjan et en Côte d'Ivoire : site vitrine, refonte, adapté au mobile et prêt pour Google. Demandez un devis.",
     h1: "Création de site web à Abidjan et partout en Côte d'Ivoire : être trouvé et contacté",
     intro:
       "Un site professionnel doit répondre vite à trois questions : que faites-vous, pour qui, et comment vous joindre. DigiProspect Agency conçoit des sites clairs, rapides sur téléphone, et construits pour que vos visiteurs passent à l'action.",
@@ -91,9 +91,9 @@ export const services: Service[] = [
     path: "/creation-site-ecommerce",
     name: "Boutiques en ligne",
     short: "Sites de vente en ligne : catalogue clair, parcours d'achat simple, adapté à vos moyens d'encaissement.",
-    title: "Création de boutique en ligne à Abidjan et en Côte d'Ivoire",
+    title: "Création de boutique en ligne à Abidjan | E-commerce",
     description:
-      "Création de boutique en ligne pour commerçants en Côte d'Ivoire : catalogue produits, parcours de commande simple, version mobile soignée. Devis sur demande.",
+      "Création de boutique en ligne en Côte d'Ivoire : catalogue produits, commande simple, version mobile soignée. Devis sur demande.",
     h1: "Créer une boutique en ligne à Abidjan et en Côte d'Ivoire, simple à gérer et agréable à utiliser",
     intro:
       "Vendre en ligne ne se résume pas à publier des photos. Il faut un catalogue lisible, un parcours de commande court et des informations qui rassurent l'acheteur. La boutique est conçue autour de votre façon de vendre.",
