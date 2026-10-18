@@ -35,7 +35,7 @@ export function HeroIllustration() {
           <path d="M118 262l6 6 11-12" stroke="#fff" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" />
         </g>
       </svg>
-      <figcaption className="mt-6 grid gap-2 text-[0.95rem] text-ink-soft">
+      <figcaption className="mt-6 grid gap-2 text-[1.05rem] text-ink-soft">
         <span className="flex gap-3"><i className="mt-2 h-2 w-5 shrink-0 rounded-full bg-orange" aria-hidden="true" />Une promesse lisible dès les premières secondes</span>
         <span className="flex gap-3"><i className="mt-2 h-2 w-5 shrink-0 rounded-full bg-ink" aria-hidden="true" />Un bouton de devis visible sur ordinateur comme sur mobile</span>
         <span className="flex gap-3"><i className="mt-2 h-2 w-5 shrink-0 rounded-full bg-green" aria-hidden="true" />Un contact WhatsApp à portée de pouce</span>

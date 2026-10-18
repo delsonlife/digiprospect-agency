@@ -18,12 +18,12 @@ const display = localFont({
   variable: "--font-bricolage",
   adjustFontFallback: "Arial",
 });
-const sans = localFont({
-  src: "./fonts/figtree-latin-wght-normal.woff2",
-  weight: "300 900",
+const body = localFont({
+  src: "./fonts/crimson-pro-latin-wght-normal.woff2",
+  weight: "200 900",
   display: "swap",
-  variable: "--font-figtree",
-  adjustFontFallback: "Arial",
+  variable: "--font-crimson",
+  adjustFontFallback: "Times New Roman",
 });
 
 // À passer à "true" dans Vercel uniquement quand l'activité est réellement installée à Abidjan.
@@ -61,7 +61,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${display.variable} ${sans.variable}`}>
+    <html lang="fr" className={`${display.variable} ${body.variable}`}>
       <body>
         <a href="#contenu" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-ink focus:px-4 focus:py-3 focus:text-white">
           Aller au contenu

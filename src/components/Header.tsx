@@ -43,13 +43,13 @@ export function Header() {
         <nav aria-label="Navigation principale" className="hidden items-center gap-7 lg:flex">
           {nav.map((item) => (
             <Link key={item.href} href={item.href} aria-current={isActive(item.href) ? "page" : undefined}
-              className={`py-2 text-[0.95rem] font-semibold hover:text-orange-deep ${isActive(item.href) ? "text-ink link-underline" : "text-ink-soft"}`}>
+              className={`py-2 text-[1.05rem] font-semibold hover:text-orange-deep ${isActive(item.href) ? "text-ink link-underline" : "text-ink-soft"}`}>
               {item.label}
             </Link>
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <Link href="/contact" className="btn btn-primary hidden !min-h-11 !px-5 !py-2 text-[0.95rem] sm:inline-flex">Demander un devis</Link>
+          <Link href="/contact" className="btn btn-primary hidden !min-h-11 !px-5 !py-2 text-[1.05rem] sm:inline-flex">Demander un devis</Link>
           <button ref={buttonRef} type="button" onClick={() => setOpen((v) => !v)}
             aria-expanded={open} aria-controls="mobile-menu" aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
             className="relative z-50 flex h-12 w-12 items-center justify-center rounded-lg border border-line lg:hidden">

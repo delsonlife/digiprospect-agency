@@ -22,7 +22,7 @@ export function FeatureCards({ items, cols = 3 }: { items: Feature[]; cols?: 3 |
           <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-ink text-white"><Icon name={c.icon} /></span>
           {c.scope && <p className={`mt-5 text-sm font-semibold ${scopeStyle[c.scope] ?? "text-ink-soft"}`}>{c.scope}</p>}
           <h3 className={`${c.scope ? "mt-1" : "mt-5"} text-xl font-bold`}>{c.title}</h3>
-          <p className="mt-3 text-[0.97rem] text-ink-soft">{c.text}</p>
+          <p className="mt-3 text-[1.05rem] text-ink-soft">{c.text}</p>
         </li>
       ))}
     </ul>

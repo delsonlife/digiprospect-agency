@@ -51,7 +51,7 @@ export function ServicePage({ service, related }: { service: Service; related: S
               <li key={s.title} className="border-t-4 border-ink pt-4">
                 <p className="font-display text-3xl font-bold text-orange-deep" aria-hidden="true">{i + 1}</p>
                 <h3 className="mt-1 text-xl font-bold">{s.title}</h3>
-                <p className="mt-2 text-[0.97rem] text-ink-soft">{s.text}</p>
+                <p className="mt-2 text-[1.05rem] text-ink-soft">{s.text}</p>
               </li>
             ))}
           </ol>

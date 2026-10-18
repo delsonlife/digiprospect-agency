@@ -10,13 +10,13 @@ export function Footer() {
       <div className="container-page grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <Logo light />
-          <p className="mt-5 max-w-xs text-[0.95rem] leading-relaxed">
+          <p className="mt-5 max-w-xs text-[1.05rem] leading-relaxed">
             Sites web, boutiques en ligne et référencement local pour les entreprises de Côte d'Ivoire et d'ailleurs.
           </p>
         </div>
         <div>
           <p className="font-display text-base font-bold text-white">Services</p>
-          <ul className="mt-4 space-y-2 text-[0.95rem]">
+          <ul className="mt-4 space-y-2 text-[1.05rem]">
             {nav.slice(0, 3).map((i) => (
               <li key={i.href}><Link href={i.href} className="inline-block py-1 hover:text-white link-underline">{i.label}</Link></li>
             ))}
@@ -24,7 +24,7 @@ export function Footer() {
         </div>
         <div>
           <p className="font-display text-base font-bold text-white">Agence</p>
-          <ul className="mt-4 space-y-2 text-[0.95rem]">
+          <ul className="mt-4 space-y-2 text-[1.05rem]">
             <li><Link href="/realisations" className="inline-block py-1 hover:text-white link-underline">Réalisations</Link></li>
             <li><Link href="/a-propos" className="inline-block py-1 hover:text-white link-underline">À propos</Link></li>
             <li><Link href="/zones-intervention" className="inline-block py-1 hover:text-white link-underline">Zones d'intervention</Link></li>
@@ -33,7 +33,7 @@ export function Footer() {
         </div>
         <div>
           <p className="font-display text-base font-bold text-white">Contact</p>
-          <ul className="mt-4 space-y-3 text-[0.95rem]">
+          <ul className="mt-4 space-y-3 text-[1.05rem]">
             <li className="flex items-center gap-3"><Icon name="pin" size={20} className="shrink-0" />{site.country} et à distance</li>
             <li>
               <a href={whatsappLink("Bonjour, je vous contacte depuis le site DigiProspect Agency.")} target="_blank" rel="noopener noreferrer"
