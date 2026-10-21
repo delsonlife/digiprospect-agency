@@ -15,12 +15,25 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Agence web à Abidjan | Sites, boutiques en ligne, SEO local",
-  description: "Agence web à Abidjan : création de site internet, boutique en ligne et SEO local pour les entreprises de Côte d'Ivoire. Demandez un devis.",
+  description: "Agence web à Abidjan : site internet, boutique en ligne, SEO local et publicité Facebook et TikTok pour les entreprises de Côte d'Ivoire.",
   path: "/",
   absoluteTitle: true,
 });
 
-const serviceIcons: IconName[] = ["browser", "cart", "search"];
+const serviceIcons: IconName[] = ["browser", "cart", "search", "megaphone"];
+
+const sources: Feature[] = [
+  { icon: "browser", title: "Site web et boutique", text: "Pour présenter votre activité, vendre en ligne et rassurer vos clients." },
+  { icon: "pin", title: "Fiche Google", text: "Pour être trouvé sur Google Maps par les clients de votre zone." },
+  { icon: "megaphone", title: "Publicité Facebook et TikTok", text: "Pour aller chercher des clients là où ils passent du temps." },
+  { icon: "cart", title: "Facebook Marketplace", text: "Pour mettre vos produits devant des acheteurs qui cherchent déjà." },
+];
+
+const auditSteps = [
+  "Un échange sur votre activité, votre niche et vos objectifs.",
+  "Une analyse de votre domaine et de votre clientèle.",
+  "Une recommandation des sources d'acquisition les plus adaptées à votre cas.",
+];
 
 const method = [
   { title: "Échange et cadrage", text: "Vous décrivez votre activité et votre objectif. Le cadrage fixe ce qui est utile, et ce qui peut attendre." },
@@ -53,7 +66,7 @@ export default function HomePage() {
               Agence web à Abidjan et en Côte d'Ivoire : donnez à votre entreprise une présence en ligne qui inspire confiance
             </h1>
             <p className="prose-measure mt-6 text-lg text-ink-soft sm:text-xl">
-              Des sites web professionnels, des boutiques en ligne et du référencement local pour aider votre entreprise à mieux présenter ses services et à développer sa visibilité.
+              Sites web, boutiques en ligne, fiche Google et publicité en ligne : des solutions choisies selon votre activité, pour mieux présenter vos services et trouver des clients.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact" className="btn btn-primary">Demander un devis</Link>
@@ -72,7 +85,7 @@ export default function HomePage() {
       <section id="services" className="border-t border-line bg-mist">
         <div className="container-page section grid gap-12 lg:grid-cols-[0.8fr_1.4fr] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <h2 className="text-h2">Création de site internet, boutique en ligne et SEO local</h2>
+            <h2 className="text-h2">Site internet, boutique en ligne, SEO local et publicité en ligne</h2>
             <p className="prose-measure mt-5 text-ink-soft">
               Pas de catalogue interminable : seulement ce que l'agence peut réaliser et suivre sérieusement.
             </p>
@@ -109,6 +122,32 @@ export default function HomePage() {
           </div>
         </section>
       )}
+
+      <section className="section">
+        <div className="container-page">
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
+            <div>
+              <h2 className="text-h2">Pas sûr d'avoir besoin d'un site web ? Commencez par un audit découverte</h2>
+              <p className="prose-measure mt-5 text-lg text-ink-soft">
+                Toutes les entreprises n'ont pas besoin d'un site pour trouver des clients. Selon votre niche, votre domaine et votre activité, DigiProspect Agency vous propose les sources d'acquisition les plus intéressantes pour votre business.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link href="/contact?service=acquisition-clients" className="btn btn-primary">Demander un audit découverte</Link>
+                <Link href="/acquisition-clients" className="btn btn-secondary">Voir la publicité en ligne</Link>
+              </div>
+            </div>
+            <ol className="space-y-5 self-center">
+              {auditSteps.map((t, i) => (
+                <li key={t} className="flex gap-5 border-b border-line pb-5">
+                  <span className="w-9 shrink-0 font-display text-4xl font-bold text-orange-deep" aria-hidden="true">{i + 1}</span>
+                  <span className="text-lg">{t}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="mt-12"><FeatureCards items={sources} cols={4} /></div>
+        </div>
+      </section>
 
       <ComeupSection />
 

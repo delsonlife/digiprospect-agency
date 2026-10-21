@@ -21,6 +21,7 @@ export const nav = [
   { href: "/creation-site-web-abidjan", label: "Création de sites" },
   { href: "/creation-site-ecommerce", label: "Boutiques en ligne" },
   { href: "/seo-referencement-local", label: "SEO local" },
+  { href: "/acquisition-clients", label: "Publicité en ligne" },
   { href: "/realisations", label: "Réalisations" },
   { href: "/a-propos", label: "À propos" },
 ];
@@ -34,6 +35,7 @@ export const whatsappMessages: Record<string, string> = {
   "/": "Bonjour, je souhaite échanger sur un projet de site web ou de visibilité en ligne.",
   "/creation-site-web-abidjan": "Bonjour, je souhaite un devis pour la création ou la refonte de mon site web.",
   "/creation-site-ecommerce": "Bonjour, je souhaite un devis pour une boutique en ligne.",
+  "/acquisition-clients": "Bonjour, je souhaite un audit découverte pour trouver les meilleures sources de clients pour mon activité.",
   "/seo-referencement-local": "Bonjour, je souhaite en savoir plus sur l'optimisation de ma fiche Google Business Profile.",
   default: "Bonjour, je vous contacte depuis le site DigiProspect Agency.",
 };

@@ -6,6 +6,7 @@ const pages: { path: string; priority: number }[] = [
   { path: "/creation-site-web-abidjan", priority: 0.9 },
   { path: "/creation-site-ecommerce", priority: 0.8 },
   { path: "/seo-referencement-local", priority: 0.9 },
+  { path: "/acquisition-clients", priority: 0.8 },
   { path: "/realisations", priority: 0.7 },
   { path: "/a-propos", priority: 0.5 },
   { path: "/zones-intervention", priority: 0.5 },

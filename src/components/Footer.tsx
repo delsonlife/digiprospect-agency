@@ -17,7 +17,7 @@ export function Footer() {
         <div>
           <p className="font-display text-base font-bold text-white">Services</p>
           <ul className="mt-4 space-y-2 text-[1.05rem]">
-            {nav.slice(0, 3).map((i) => (
+            {nav.slice(0, 4).map((i) => (
               <li key={i.href}><Link href={i.href} className="inline-block py-1 hover:text-white link-underline">{i.label}</Link></li>
             ))}
           </ul>

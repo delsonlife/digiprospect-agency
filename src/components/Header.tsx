@@ -40,7 +40,7 @@ export function Header() {
       <div className="tricolor" />
       <div className="container-page flex h-[4.25rem] items-center justify-between gap-6">
         <Logo />
-        <nav aria-label="Navigation principale" className="hidden items-center gap-7 lg:flex">
+        <nav aria-label="Navigation principale" className="hidden items-center gap-7 xl:flex">
           {nav.map((item) => (
             <Link key={item.href} href={item.href} aria-current={isActive(item.href) ? "page" : undefined}
               className={`py-2 text-[1.05rem] font-semibold hover:text-orange-deep ${isActive(item.href) ? "text-ink link-underline" : "text-ink-soft"}`}>
@@ -52,7 +52,7 @@ export function Header() {
           <Link href="/contact" className="btn btn-primary hidden !min-h-11 !px-5 !py-2 text-[1.05rem] sm:inline-flex">Demander un devis</Link>
           <button ref={buttonRef} type="button" onClick={() => setOpen((v) => !v)}
             aria-expanded={open} aria-controls="mobile-menu" aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
-            className="relative z-50 flex h-12 w-12 items-center justify-center rounded-lg border border-line lg:hidden">
+            className="relative z-50 flex h-12 w-12 items-center justify-center rounded-lg border border-line xl:hidden">
             <Icon name={open ? "close" : "menu"} />
           </button>
         </div>
@@ -60,7 +60,7 @@ export function Header() {
 
       {open && (
         <div id="mobile-menu" ref={panelRef} role="dialog" aria-modal="true" aria-label="Menu"
-          className="fixed inset-x-0 bottom-0 top-[calc(4.25rem+4px)] z-40 overflow-y-auto bg-white lg:hidden">
+          className="fixed inset-x-0 bottom-0 top-[calc(4.25rem+4px)] z-40 overflow-y-auto bg-white xl:hidden">
           <nav aria-label="Navigation mobile" className="container-page flex flex-col py-4">
             {[{ href: "/", label: "Accueil" }, ...nav, { href: "/zones-intervention", label: "Zones d'intervention" }].map((item) => (
               <Link key={item.href} href={item.href} aria-current={pathname === item.href ? "page" : undefined}

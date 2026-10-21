@@ -160,16 +160,68 @@ export const services: Service[] = [
     faq: gbp.faq,
     quoteLabel: gbp.quoteLabel,
   },
+  {
+    slug: "acquisition-clients",
+    path: "/acquisition-clients",
+    name: "Publicité en ligne et acquisition de clients",
+    short: "Publicité Facebook et TikTok, Facebook Marketplace et audit découverte pour trouver les sources de clients adaptées à votre activité.",
+    title: "Publicité Facebook et TikTok à Abidjan | Acquisition clients",
+    description: "Publicité Facebook Ads, TikTok Ads et Facebook Marketplace en Côte d'Ivoire : un audit découverte pour choisir les bonnes sources de clients.",
+    h1: "Publicité Facebook, TikTok et Marketplace : trouver des clients là où ils sont",
+    image: { src: "/images/publicite-facebook-tiktok-marketplace-acquisition-clients.svg", alt: "Illustration d'un téléphone affichant des publicités, avec un mégaphone, un panier et une bulle de message" },
+    intro: "Toutes les entreprises n'ont pas besoin d'un site web pour trouver des clients. Selon votre activité, votre niche et votre clientèle, DigiProspect Agency commence par un audit découverte, puis recommande les sources d'acquisition les plus adaptées : publicité Facebook, publicité TikTok, vente sur Facebook Marketplace, fiche Google ou site web.",
+    problem: "Beaucoup d'entreprises publient sur les réseaux sociaux sans méthode : des publications sans objectif, des publicités lancées sans ciblage clair, des annonces qui passent inaperçues. Les messages arrivent peu, et il est difficile de savoir quoi améliorer.",
+    benefits: [
+      "Une recommandation fondée sur votre activité et votre clientèle, pas une solution toute faite.",
+      "Des campagnes construites autour d'un objectif précis : messages, appels, visites ou commandes.",
+      "Des annonces Marketplace mieux présentées : photos, titres et descriptions.",
+      "Une lecture claire de ce qui fonctionne, expliquée simplement.",
+    ],
+    includes: [
+      { icon: "search", title: "Audit découverte", text: "Échange pour comprendre votre domaine, votre clientèle et vos objectifs, puis recommandation des sources adaptées." },
+      { icon: "megaphone", title: "Publicité Facebook", text: "Création et gestion de campagnes Facebook Ads selon votre objectif." },
+      { icon: "phone", title: "Publicité TikTok", text: "Création et gestion de campagnes TikTok Ads pour toucher l'audience de la plateforme." },
+      { icon: "cart", title: "Facebook Marketplace", text: "Mise en valeur de vos produits sur Marketplace : annonces, photos et descriptions." },
+      { icon: "pin", title: "Fiche Google", text: "Optimisation de votre fiche Google Business Profile lorsque votre activité s'y prête." },
+      { icon: "refresh", title: "Suivi et ajustements", text: "Lecture des résultats avec vous et ajustements, selon la formule choisie." },
+    ],
+    steps: [
+      { title: "Audit découverte", text: "Échange sur votre activité, votre niche, votre clientèle et vos objectifs." },
+      { title: "Recommandation", text: "Proposition des sources d'acquisition les plus adaptées à votre cas, avec les priorités." },
+      { title: "Mise en place", text: "Création des campagnes, des annonces ou des pages retenues." },
+      { title: "Lancement", text: "Mise en ligne et vérification du suivi des résultats." },
+      { title: "Suivi", text: "Lecture des résultats et ajustements, selon la formule choisie." },
+    ],
+    needed: [
+      "Votre activité, vos produits ou vos services",
+      "Votre clientèle cible et votre zone",
+      "Vos photos et visuels existants, si vous en avez",
+      "L'accès à votre page Facebook ou à votre compte TikTok, ou leur création avec vous",
+      "Un budget publicitaire indicatif, si vous prévoyez de la publicité",
+    ],
+    faq: [
+      { q: "Ai-je besoin d'un site web pour faire de la publicité ?", a: "Pas toujours. Selon votre activité, des messages WhatsApp, une page Facebook ou des annonces Marketplace peuvent suffire pour commencer. L'audit découverte sert justement à choisir la bonne solution." },
+      { q: "Qu'est-ce que l'audit découverte ?", a: "Un échange pour comprendre votre domaine, votre clientèle et vos objectifs, suivi d'une recommandation des sources d'acquisition adaptées. Les modalités sont précisées lors de votre demande." },
+      { q: "Le budget publicitaire est-il compris ?", a: "Le budget diffusé sur Facebook ou TikTok est payé à la plateforme et s'ajoute au prix de la prestation. Un montant indicatif est défini avec vous avant le lancement." },
+      { q: "Garantissez-vous des ventes ou un nombre de clients ?", a: "Non. Les résultats dépendent de votre offre, de votre marché et du budget. Le travail porte sur la qualité de la mise en place et du suivi." },
+      { q: "Intervenez-vous en dehors d'Abidjan ?", a: "Oui. Ces prestations se font à distance, pour des entreprises situées à Abidjan, ailleurs en Côte d'Ivoire ou à l'étranger." },
+    ],
+    quoteLabel: "Demander un audit découverte",
+  },
 ];
 
 export const homeFaq: Faq[] = [
+  {
+    q: "Mon entreprise a-t-elle forcément besoin d'un site web ?",
+    a: "Pas toujours. Selon votre activité, d'autres sources de clients peuvent être plus adaptées : publicité Facebook ou TikTok, Facebook Marketplace, fiche Google. Un audit découverte permet de choisir ce qui convient à votre cas.",
+  },
   {
     q: "Intervenez-vous en dehors d'Abidjan ?",
     a: "Oui. DigiProspect Agency accompagne des entreprises à Abidjan comme dans le reste de la Côte d'Ivoire. Pour une entreprise située à l'étranger, le projet se mène à distance.",
   },
   {
     q: "Quels types de projets prenez-vous en charge ?",
-    a: "Création et refonte de sites vitrines, boutiques en ligne, et optimisation et suivi de fiches Google Business Profile. Si votre besoin sort de ce cadre, l'agence le précise avant de commencer.",
+    a: "Création et refonte de sites vitrines, boutiques en ligne, optimisation de fiche Google, publicité Facebook et TikTok. Si votre besoin sort de ce cadre, l'agence le précise avant de commencer.",
   },
   {
     q: "Comment se passe une demande de devis ?",

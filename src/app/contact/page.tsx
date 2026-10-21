@@ -15,6 +15,7 @@ const preset: Record<string, string> = {
   "creation-site-web": "Création de site web",
   "creation-site-ecommerce": "Boutique en ligne",
   "seo-referencement-local": "Optimisation de fiche Google Business Profile",
+  "acquisition-clients": "Audit découverte et publicité en ligne",
 };
 
 export default async function Page({ searchParams }: { searchParams: Promise<{ service?: string }> }) {
