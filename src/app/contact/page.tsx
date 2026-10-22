@@ -7,7 +7,7 @@ import { site, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Demande de devis et contact",
-  description: "Demandez un devis pour un site internet, une boutique en ligne ou l'optimisation de votre fiche Google. Réponse par e-mail ou WhatsApp.",
+  description: "Demandez un devis ou un audit découverte : site internet, boutique en ligne, fiche Google ou acquisition de clients. Réponse par e-mail ou WhatsApp.",
   path: "/contact",
 });
 
@@ -15,7 +15,8 @@ const preset: Record<string, string> = {
   "creation-site-web": "Création de site web",
   "creation-site-ecommerce": "Boutique en ligne",
   "seo-referencement-local": "Optimisation de fiche Google Business Profile",
-  "acquisition-clients": "Audit découverte et publicité en ligne",
+  "acquisition-clients": "Audit découverte et acquisition de clients",
+  audit: "Audit découverte et acquisition de clients",
 };
 
 export default async function Page({ searchParams }: { searchParams: Promise<{ service?: string }> }) {

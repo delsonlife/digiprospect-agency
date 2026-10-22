@@ -11,7 +11,7 @@ export function Footer() {
         <div>
           <Logo light />
           <p className="mt-5 max-w-xs text-[1.05rem] leading-relaxed">
-            Sites web, boutiques en ligne et référencement local pour les entreprises de Côte d'Ivoire et d'ailleurs.
+            Sites web, boutiques en ligne, fiche Google et acquisition de clients pour les entreprises de Côte d'Ivoire et d'ailleurs.
           </p>
         </div>
         <div>

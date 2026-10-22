@@ -40,7 +40,7 @@ export function Header() {
       <div className="tricolor" />
       <div className="container-page flex h-[4.25rem] items-center justify-between gap-6">
         <Logo />
-        <nav aria-label="Navigation principale" className="hidden items-center gap-7 xl:flex">
+        <nav aria-label="Navigation principale" className="hidden items-center gap-6 whitespace-nowrap xl:flex">
           {nav.map((item) => (
             <Link key={item.href} href={item.href} aria-current={isActive(item.href) ? "page" : undefined}
               className={`py-2 text-[1.05rem] font-semibold hover:text-orange-deep ${isActive(item.href) ? "text-ink link-underline" : "text-ink-soft"}`}>

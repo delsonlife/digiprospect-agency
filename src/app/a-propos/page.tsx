@@ -14,9 +14,9 @@ export const metadata: Metadata = pageMetadata({
 
 const principles: Feature[] = [
   { icon: "check", title: "Dire ce qui est faisable", text: "Si un besoin sort du périmètre de l'agence ou si une promesse n'est pas tenable, DigiProspect Agency le précise avant de commencer." },
-  { icon: "browser", title: "Construire pour le client final", text: "Un site réussi est d'abord clair pour la personne qui le visite : que proposez-vous, et comment vous contacter." },
+  { icon: "browser", title: "Construire pour le client final", text: "Un site, une annonce ou une fiche réussis sont d'abord clairs pour la personne qui les voit : que proposez-vous, et comment vous contacter." },
   { icon: "text", title: "Rester transparent", text: "Prix, contenus à fournir, étapes et limites sont écrits. Aucun résultat Google n'est garanti, car personne ne peut le faire." },
-  { icon: "refresh", title: "Laisser le site à jour", text: "Le site doit pouvoir vivre après la livraison : vous savez le modifier, ou vous savez à qui le demander." },
+  { icon: "refresh", title: "Rester autonome", text: "Ce qui est mis en place doit pouvoir vivre après la livraison : vous savez le modifier, ou vous savez à qui le demander." },
 ];
 
 export default function Page() {
@@ -36,7 +36,7 @@ export default function Page() {
               Le nom dit l'objectif : un site utile se juge à ce qu'il apporte à l'entreprise, pas seulement à son apparence. Chaque projet commence par une question simple : qui doit vous trouver, et que doit-il faire ensuite ?
             </p>
             <p>
-              {site.name} intervient à Abidjan et partout en Côte d'Ivoire, ainsi qu'à distance à l'international, sur quatre sujets : le site web, la boutique en ligne, la fiche Google Business Profile et la publicité en ligne.
+              {site.name} intervient à Abidjan et partout en Côte d'Ivoire, ainsi qu'à distance à l'international, sur quatre sujets : le site web, la boutique en ligne, la fiche Google Business Profile et l'acquisition de clients.
             </p>
           </div>
           {/* TODO : ajouter ici une courte présentation personnelle (parcours, spécialités) et une photo réelle. */}

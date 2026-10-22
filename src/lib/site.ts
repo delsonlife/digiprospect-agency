@@ -20,8 +20,8 @@ export function whatsappLink(message: string) {
 export const nav = [
   { href: "/creation-site-web-abidjan", label: "Création de sites" },
   { href: "/creation-site-ecommerce", label: "Boutiques en ligne" },
-  { href: "/seo-referencement-local", label: "SEO local" },
-  { href: "/acquisition-clients", label: "Publicité en ligne" },
+  { href: "/seo-referencement-local", label: "Fiche Google" },
+  { href: "/acquisition-clients", label: "Acquisition de clients" },
   { href: "/realisations", label: "Réalisations" },
   { href: "/a-propos", label: "À propos" },
 ];
@@ -32,7 +32,7 @@ export const communes = [
 ];
 
 export const whatsappMessages: Record<string, string> = {
-  "/": "Bonjour, je souhaite échanger sur un projet de site web ou de visibilité en ligne.",
+  "/": "Bonjour, je souhaite un audit découverte pour développer ma visibilité et trouver de nouveaux clients.",
   "/creation-site-web-abidjan": "Bonjour, je souhaite un devis pour la création ou la refonte de mon site web.",
   "/creation-site-ecommerce": "Bonjour, je souhaite un devis pour une boutique en ligne.",
   "/acquisition-clients": "Bonjour, je souhaite un audit découverte pour trouver les meilleures sources de clients pour mon activité.",

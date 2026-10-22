@@ -6,7 +6,9 @@ export function CtaBand({
   title = "Parlons de votre projet",
   text = "Décrivez votre activité et votre besoin. Vous recevez une réponse claire sur ce qui est faisable et sur la suite.",
   waMessage = "Bonjour, je souhaite demander un devis.",
-}: { title?: string; text?: string; waMessage?: string }) {
+  primaryLabel = "Demander un devis",
+  primaryHref = "/contact",
+}: { title?: string; text?: string; waMessage?: string; primaryLabel?: string; primaryHref?: string }) {
   return (
     <section className="bg-ink text-white">
       <div className="tricolor" />
@@ -16,7 +18,7 @@ export function CtaBand({
           <p className="prose-measure mt-4 text-lg text-white/75">{text}</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-          <Link href="/contact" className="btn btn-on-dark">Demander un devis</Link>
+          <Link href={primaryHref} className="btn btn-on-dark">{primaryLabel}</Link>
           <a href={whatsappLink(waMessage)} target="_blank" rel="noopener noreferrer"
              className="btn border-2 border-white/40 text-white hover:border-white hover:bg-white/10">
             <Icon name="whatsapp" size={22} /> Écrire sur WhatsApp

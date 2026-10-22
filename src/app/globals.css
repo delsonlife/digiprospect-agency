@@ -15,7 +15,7 @@
   --font-body: var(--font-crimson), Georgia, "Times New Roman", serif;
 
   --text-sm: 1rem;
-  --text-hero: clamp(2.35rem, 6.2vw + 0.4rem, 4.9rem);
+  --text-hero: clamp(2.2rem, 5vw + 0.5rem, 4.15rem);
   --text-h2: clamp(1.75rem, 3vw + 0.6rem, 2.9rem);
   --text-h3: clamp(1.2rem, 0.8vw + 1rem, 1.5rem);
 }

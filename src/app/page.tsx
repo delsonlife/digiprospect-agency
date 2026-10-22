@@ -1,58 +1,63 @@
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
-import { CtaBand } from "@/components/CtaBand";
 import { ComeupSection } from "@/components/ComeupSection";
+import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { FeatureCards, type Feature } from "@/components/FeatureCards";
-import { HeroIllustration } from "@/components/HeroIllustration";
-import { Icon, type IconName } from "@/components/Icon";
+import { HeroLevers } from "@/components/HeroLevers";
+import { type IconName } from "@/components/Icon";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { projects } from "@/content/projects";
 import { homeFaq, services } from "@/content/services";
-import { site } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Agence web à Abidjan | Sites, boutiques en ligne, SEO local",
-  description: "Agence web à Abidjan : site internet, boutique en ligne, SEO local et publicité Facebook et TikTok pour les entreprises de Côte d'Ivoire.",
+  title: "Agence web à Abidjan | Visibilité et acquisition de clients",
+  description: "Agence web à Abidjan : site internet, fiche Google, publicité Facebook, Instagram et TikTok pour développer votre visibilité en Côte d'Ivoire.",
   path: "/",
   absoluteTitle: true,
 });
 
-const serviceIcons: IconName[] = ["browser", "cart", "search", "megaphone"];
+const AUDIT_HREF = "/contact?service=audit";
 
-const sources: Feature[] = [
-  { icon: "browser", title: "Site web et boutique", text: "Pour présenter votre activité, vendre en ligne et rassurer vos clients." },
-  { icon: "pin", title: "Fiche Google", text: "Pour être trouvé sur Google Maps par les clients de votre zone." },
-  { icon: "megaphone", title: "Publicité Facebook et TikTok", text: "Pour aller chercher des clients là où ils passent du temps." },
-  { icon: "cart", title: "Facebook Marketplace", text: "Pour mettre vos produits devant des acheteurs qui cherchent déjà." },
+const serviceIcons: Record<string, IconName> = {
+  "creation-site-web": "browser",
+  "creation-site-ecommerce": "cart",
+  "seo-referencement-local": "pin",
+  "acquisition-clients": "megaphone",
+};
+
+const levers = [
+  "Comprendre l'activité, les produits ou les services et les objectifs.",
+  "Identifier les canaux qui méritent d'être privilégiés.",
+  "Définir les prochaines actions en tenant compte du budget et des priorités.",
 ];
 
-const auditSteps = [
-  "Un échange sur votre activité, votre niche et vos objectifs.",
-  "Une analyse de votre domaine et de votre clientèle.",
-  "Une recommandation des sources d'acquisition les plus adaptées à votre cas.",
+const approach: Feature[] = [
+  { icon: "search", title: "Comprendre votre activité", text: "Connaître les produits, les services et les clients visés." },
+  { icon: "grid", title: "Choisir les bons leviers", text: "Privilégier les solutions cohérentes avec les objectifs et le budget." },
+  { icon: "check", title: "Mettre en œuvre les actions utiles", text: "Réaliser les prestations retenues, sans ajouter des services inutiles." },
+  { icon: "refresh", title: "Suivre et ajuster", text: "Examiner les données disponibles et apporter des améliorations lorsque cela est pertinent." },
 ];
 
-const method = [
-  { title: "Échange et cadrage", text: "Vous décrivez votre activité et votre objectif. Le cadrage fixe ce qui est utile, et ce qui peut attendre." },
-  { title: "Proposition écrite", text: "Pages, fonctionnalités, contenus à fournir et prix : tout est posé avant de commencer." },
-  { title: "Réalisation et validation", text: "Vous voyez le travail avancer et validez chaque étape avant la mise en ligne." },
-  { title: "Mise en ligne et suivi", text: "Mise en ligne, vérifications avant l'ouverture, déclaration du site à Google, puis ajustements." },
-];
-
-const bases: Feature[] = [
-  { icon: "phone", title: "Mobile d'abord", text: "Une version mobile pensée en premier, pour les visiteurs qui vous consultent depuis leur téléphone." },
-  { icon: "search", title: "Prêt pour Google", text: "Titres, descriptions et structure des pages pensés pour le référencement." },
-  { icon: "mail", title: "Formulaire de contact", text: "Les demandes de vos visiteurs vous parviennent directement par e-mail." },
-  { icon: "whatsapp", title: "Contact visible", text: "Bouton WhatsApp et liens de contact bien placés sur chaque page." },
-  { icon: "text", title: "Mentions légales", text: "Mentions légales et politique de confidentialité prévues dès la livraison." },
-  { icon: "link", title: "Visibilité suivie", text: "Aperçu soigné lors du partage du site et suivi de sa visibilité avec Google Search Console." },
+const process = [
+  { title: "Échange", text: "Discussion sur votre activité et compréhension de vos objectifs." },
+  { title: "Analyse", text: "Analyse de vos besoins et recommandations." },
+  { title: "Proposition", text: "Présentation des actions envisagées et validation de celles que vous retenez." },
+  { title: "Mise en œuvre", text: "Réalisation des prestations convenues." },
+  { title: "Suivi", text: "Suivi ou recommandations complémentaires, selon la formule." },
 ];
 
 export default function HomePage() {
   const featured = projects.slice(0, 3);
+  const serviceCards: Feature[] = services.map((s) => ({
+    icon: serviceIcons[s.slug] ?? "check",
+    title: s.name,
+    text: s.short,
+    href: s.path,
+    cta: "Voir le détail",
+  }));
   return (
     <>
       <section className="overflow-hidden">
@@ -60,52 +65,65 @@ export default function HomePage() {
           <div>
             <p className="flex items-center gap-3 text-[1.05rem] font-semibold text-ink-soft">
               <span className="tricolor-sm" aria-hidden="true" />
-              {site.name}
+              Agence web à Abidjan et en Côte d'Ivoire
             </p>
-            <h1 className="mt-6 text-hero">
-              Agence web à Abidjan et en Côte d'Ivoire : donnez à votre entreprise une présence en ligne qui inspire confiance
-            </h1>
+            <h1 className="mt-6 text-hero">Développez votre visibilité et trouvez de nouveaux clients en Côte d'Ivoire</h1>
             <p className="prose-measure mt-6 text-lg text-ink-soft sm:text-xl">
-              Sites web, boutiques en ligne, fiche Google et publicité en ligne : des solutions choisies selon votre activité, pour mieux présenter vos services et trouver des clients.
+              Site web, fiche Google, publicité sur Facebook, Instagram ou TikTok : chaque entreprise a des besoins différents. DigiProspect Agency vous aide à identifier les solutions adaptées à votre activité et à mettre en place une stratégie cohérente avec vos objectifs.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact" className="btn btn-primary">Demander un devis</Link>
-              <Link href={featured.length ? "/realisations" : "#services"} className="btn btn-secondary">
-                {featured.length ? "Voir les réalisations" : "Découvrir les services"}
-              </Link>
+              <Link href={AUDIT_HREF} className="btn btn-primary">Demander un audit découverte</Link>
+              <Link href="#services" className="btn btn-secondary">Découvrir nos services</Link>
             </div>
           </div>
           <div className="relative rounded-3xl bg-mist px-6 pb-8 pt-10 sm:px-10">
             <div className="tricolor absolute inset-x-0 top-0 rounded-t-3xl" />
-            <HeroIllustration />
+            <HeroLevers />
           </div>
         </div>
       </section>
 
-      <section id="services" className="border-t border-line bg-mist">
-        <div className="container-page section grid gap-12 lg:grid-cols-[0.8fr_1.4fr] lg:gap-20">
-          <div className="lg:sticky lg:top-28 lg:self-start">
-            <h2 className="text-h2">Site internet, boutique en ligne, SEO local et publicité en ligne</h2>
-            <p className="prose-measure mt-5 text-ink-soft">
-              Pas de catalogue interminable : seulement ce que l'agence peut réaliser et suivre sérieusement.
+      <section id="services" className="border-y border-line bg-mist">
+        <div className="container-page section">
+          <div className="max-w-3xl">
+            <h2 className="text-h2">Les solutions adaptées à votre activité</h2>
+            <p className="prose-measure mt-5 text-lg text-ink-soft">
+              Nous sélectionnons les leviers les plus pertinents selon ce que vous proposez, les clients que vous souhaitez atteindre et vos objectifs commerciaux.
             </p>
           </div>
-          <ul className="divide-y divide-line border-y border-line">
-            {services.map((s, i) => (
-              <li key={s.slug}>
-                <Link href={s.path} className="group grid gap-4 py-8 sm:grid-cols-[3.5rem_1fr] sm:gap-6">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-ink text-white group-hover:bg-orange">
-                    <Icon name={serviceIcons[i]} />
-                  </span>
-                  <span>
-                    <h3 className="font-display text-2xl font-bold group-hover:text-orange-deep">{s.name}</h3>
-                    <span className="prose-measure mt-2 block text-ink-soft">{s.short}</span>
-                    <span className="link-underline mt-4 inline-block font-semibold">Voir le détail du service</span>
-                  </span>
-                </Link>
+          <div className="mt-10"><FeatureCards items={serviceCards} cols={2} /></div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container-page grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
+          <div>
+            <h2 className="text-h2">Quels leviers pour développer votre activité ?</h2>
+            <p className="prose-measure mt-5 text-lg text-ink-soft">
+              Avant de vous recommander une prestation, nous cherchons à comprendre votre activité, votre clientèle et vos objectifs. Selon votre situation, la priorité peut être une fiche Google mieux optimisée, des campagnes publicitaires sur les réseaux sociaux, un site web ou une combinaison de plusieurs solutions.
+            </p>
+            <div className="mt-8">
+              <Link href={AUDIT_HREF} className="btn btn-primary">Demander un audit découverte</Link>
+            </div>
+          </div>
+          <ol className="space-y-5 self-center">
+            {levers.map((t, i) => (
+              <li key={t} className="flex gap-5 border-b border-line pb-5">
+                <span className="w-9 shrink-0 font-display text-4xl font-bold text-orange-deep" aria-hidden="true">{i + 1}</span>
+                <span className="text-lg">{t}</span>
               </li>
             ))}
-          </ul>
+          </ol>
+        </div>
+      </section>
+
+      <section className="border-y border-line bg-mist">
+        <div className="container-page section">
+          <div className="max-w-3xl">
+            <h2 className="text-h2">Une stratégie adaptée à votre réalité</h2>
+            <p className="prose-measure mt-5 text-lg text-ink-soft">Une méthode de travail simple, quelle que soit la prestation.</p>
+          </div>
+          <div className="mt-10"><FeatureCards items={approach} cols={4} /></div>
         </div>
       </section>
 
@@ -123,54 +141,16 @@ export default function HomePage() {
         </section>
       )}
 
-      <section className="section">
-        <div className="container-page">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
-            <div>
-              <h2 className="text-h2">Pas sûr d'avoir besoin d'un site web ? Commencez par un audit découverte</h2>
-              <p className="prose-measure mt-5 text-lg text-ink-soft">
-                Toutes les entreprises n'ont pas besoin d'un site pour trouver des clients. Selon votre niche, votre domaine et votre activité, DigiProspect Agency vous propose les sources d'acquisition les plus intéressantes pour votre business.
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link href="/contact?service=acquisition-clients" className="btn btn-primary">Demander un audit découverte</Link>
-                <Link href="/acquisition-clients" className="btn btn-secondary">Voir la publicité en ligne</Link>
-              </div>
-            </div>
-            <ol className="space-y-5 self-center">
-              {auditSteps.map((t, i) => (
-                <li key={t} className="flex gap-5 border-b border-line pb-5">
-                  <span className="w-9 shrink-0 font-display text-4xl font-bold text-orange-deep" aria-hidden="true">{i + 1}</span>
-                  <span className="text-lg">{t}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
-          <div className="mt-12"><FeatureCards items={sources} cols={4} /></div>
-        </div>
-      </section>
-
       <ComeupSection />
 
       <ReviewsSection />
 
-      <section className="border-y border-line bg-mist">
-        <div className="container-page section">
-          <div className="max-w-3xl">
-            <h2 className="text-h2">Chaque projet repose sur les mêmes bases</h2>
-            <p className="prose-measure mt-5 text-ink-soft">
-              Ce qui compte pour vos visiteurs et pour votre visibilité en ligne est prévu dès le départ, pas ajouté après coup. Le contenu exact de chaque projet est précisé dans le devis.
-            </p>
-          </div>
-          <div className="mt-10"><FeatureCards items={bases} cols={3} /></div>
-        </div>
-      </section>
-
       <section className="bg-ink text-white">
         <div className="container-page section">
-          <h2 className="max-w-2xl text-h2">Comment se déroule un projet</h2>
-          <ol className="mt-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-            {method.map((m, i) => (
-              <li key={m.title} className="border-t-4 border-orange pt-5 odd:border-orange even:border-green">
+          <h2 className="max-w-2xl text-h2">Comment se déroule l'accompagnement</h2>
+          <ol className="mt-12 grid gap-10 md:grid-cols-2 lg:grid-cols-5">
+            {process.map((m, i) => (
+              <li key={m.title} className={`border-t-4 pt-5 ${i % 2 === 0 ? "border-orange" : "border-green"}`}>
                 <p className="font-display text-4xl font-bold text-white/30" aria-hidden="true">{i + 1}</p>
                 <h3 className="mt-2 text-h3 font-bold">{m.title}</h3>
                 <p className="mt-3 text-white/75">{m.text}</p>
@@ -183,7 +163,7 @@ export default function HomePage() {
       <section className="border-y border-line bg-mist">
         <div className="container-page section grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
           <div>
-            <h2 className="text-h2">Des services web accessibles où que se trouve votre entreprise</h2>
+            <h2 className="text-h2">Des services accessibles où que se trouve votre entreprise</h2>
             <p className="prose-measure mt-5 text-ink-soft">
               DigiProspect Agency accompagne des entreprises à Abidjan, dans toutes les villes et régions du pays, et à distance pour celles situées à l'étranger.
             </p>
@@ -207,7 +187,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand
+        title="Parlons de votre projet"
+        text="Présentez votre activité et vos objectifs. Vous recevez une réponse claire sur les solutions possibles et sur la suite."
+        waMessage="Bonjour, je souhaite un audit découverte pour développer ma visibilité et trouver de nouveaux clients."
+        primaryLabel="Demander un audit découverte"
+        primaryHref={AUDIT_HREF}
+      />
     </>
   );
 }
