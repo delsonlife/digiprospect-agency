@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ComeupSection } from "@/components/ComeupSection";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
+import { FounderSection } from "@/components/FounderSection";
 import { FeatureCards, type Feature } from "@/components/FeatureCards";
 import { HeroLevers } from "@/components/HeroLevers";
 import { type IconName } from "@/components/Icon";
@@ -94,6 +95,8 @@ export default function HomePage() {
           <div className="mt-10"><FeatureCards items={serviceCards} cols={2} /></div>
         </div>
       </section>
+
+      <FounderSection />
 
       <section className="section">
         <div className="container-page grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
