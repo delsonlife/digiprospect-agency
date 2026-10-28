@@ -28,6 +28,15 @@ export const gbp = {
     "Donner aux clients proches les informations utiles pour vous contacter.",
     "Montrer une entreprise active, avec des informations fiables et à jour.",
   ],
+  top3Title: "Viser le top\u00a03 de Google Maps",
+  top3: [
+    "Quand une personne cherche un produit ou un service près de chez elle, Google affiche d'abord un petit groupe de trois entreprises sur la carte, avant la liste de toutes les autres. Ce groupe est souvent appelé « Local Pack » ou « top\u00a03 » de Google Maps.",
+    "Les entreprises qui y figurent sont les premières que le client voit. Les suivantes demandent un geste de plus : afficher davantage de résultats.",
+    "L'objectif de cette prestation est d'accompagner les entreprises pour qu'elles aient de meilleures chances d'apparaître dans ce top\u00a03, là où elles ont la possibilité d'être vues par les clients de leur zone. Pour cela, la qualité, la pertinence et la complétude de la fiche sont travaillées.",
+  ],
+  top3Honesty:
+    "Entrer dans le top\u00a03 n'est jamais garanti : cela dépend notamment de la concurrence, de la proximité du client et de la pertinence de sa recherche.",
+  top3Caption: "Schéma illustratif : il ne représente aucun classement réel.",
   cardsTitle: "Ce que comprend la prestation",
   cards: [
     { icon: "search", scope: "Optimisation initiale", title: "Audit de la fiche", text: "État des lieux de votre fiche existante et liste des points à améliorer en priorité." },

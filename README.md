@@ -67,3 +67,12 @@ Certaines phrases décrivent une façon de travailler (proposition écrite avant
 
 ## Images
 Les illustrations des pages sont des SVG originaux dans `public/images/` (noms descriptifs, textes alternatifs définis dans chaque page ou dans `src/content/services.ts`). Pour les remplacer par de vraies photos, déposez le fichier dans `public/images/` et modifiez le `src` et le `alt` correspondants. La page Réalisations n'a volontairement pas d'image : ses visuels viendront de `src/content/projects.ts`.
+
+## Installation sur Android (application web)
+Le fichier `src/app/manifest.ts` déclare l'application : `start_url` et `id` valent `/`, donc l'application installée s'ouvre toujours sur l'accueil. Il n'y a volontairement pas de service worker (pas de cache hors ligne, donc pas de risque d'ancienne version qui reste en mémoire).
+
+Pour tester après un déploiement :
+1. Supprimez l'ancien raccourci ou l'ancienne application de l'écran d'accueil (appui long, puis Supprimer ou Désinstaller).
+2. Dans Chrome : menu ⋮, Paramètres, Paramètres des sites, Stockage (ou Toutes les données des sites), cherchez le domaine du site et effacez ses données.
+3. Rouvrez le site sur la page d'accueil, menu ⋮, choisissez « Installer l'application » (et non seulement « Ajouter à l'écran d'accueil »).
+4. Lancez l'icône : l'application doit s'ouvrir sur l'accueil.

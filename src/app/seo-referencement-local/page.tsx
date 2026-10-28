@@ -40,6 +40,54 @@ export default function Page() {
       </section>
 
       <section className="border-y border-line bg-mist">
+        <div className="container-page section grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-20">
+          <div>
+            <h2 className="text-h2">{gbp.top3Title}</h2>
+            <div className="prose-measure mt-5 space-y-4 text-lg text-ink-soft">
+              {gbp.top3.map((t) => <p key={t.slice(0, 24)}>{t}</p>)}
+            </div>
+            <p className="prose-measure mt-6 border-l-4 border-orange pl-5 text-ink-soft">{gbp.top3Honesty}</p>
+          </div>
+          <figure className="mx-auto w-full max-w-md">
+            <div aria-hidden="true" className="rounded-2xl border border-line bg-white p-5">
+              <div className="flex items-center gap-3">
+                <span className="h-3 w-3 rounded-full bg-orange" />
+                <span className="h-3 w-24 rounded-full bg-line" />
+              </div>
+              <div className="mt-4 space-y-3">
+                {[0, 1, 2].map((i) => (
+                  <div key={i} className="flex items-center gap-4 rounded-xl border border-line border-l-4 border-l-orange bg-mist p-3">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-ink text-white"><Icon name="pin" size={20} /></span>
+                    <div className="flex-1 space-y-2">
+                      <span className="block h-3 w-3/4 rounded-full bg-ink/80" />
+                      <span className="block h-2.5 w-1/2 rounded-full bg-line" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="my-4 flex items-center gap-3 text-sm font-semibold text-ink-soft">
+                <span className="h-px flex-1 bg-line" /> Les autres résultats <span className="h-px flex-1 bg-line" />
+              </div>
+              <div className="space-y-3 opacity-50">
+                {[0, 1].map((i) => (
+                  <div key={i} className="flex items-center gap-4 rounded-xl border border-line p-3">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-line text-ink-soft"><Icon name="pin" size={20} /></span>
+                    <div className="flex-1 space-y-2">
+                      <span className="block h-3 w-2/3 rounded-full bg-line" />
+                      <span className="block h-2.5 w-2/5 rounded-full bg-line" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <figcaption className="mt-3 text-sm text-ink-soft">
+              <span className="font-semibold text-orange-deep">Top&nbsp;3</span> : les trois premières entreprises affichées. {gbp.top3Caption}
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section className="border-y border-line bg-mist">
         <div className="container-page section">
           <h2 className="text-h2">{gbp.cardsTitle}</h2>
           <div className="mt-10"><FeatureCards items={gbp.cards} cols={4} /></div>
