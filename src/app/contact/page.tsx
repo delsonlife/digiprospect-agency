@@ -39,8 +39,12 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
               <a href={whatsappLink("Bonjour, je vous contacte depuis la page contact du site.")} target="_blank" rel="noopener noreferrer" className="btn btn-secondary mt-5">
                 <Icon name="whatsapp" size={22} /> Écrire sur WhatsApp
               </a>
+              <p className="mt-5">
+                <a href={site.phoneHref} className="link-underline font-semibold">{site.phoneDisplay}</a>
+                <span className="text-ink-soft"> (appel et WhatsApp)</span>
+              </p>
               {site.email && (
-                <p className="mt-5"><a href={`mailto:${site.email}`} className="link-underline font-semibold">{site.email}</a></p>
+                <p className="mt-3"><a href={`mailto:${site.email}`} className="link-underline font-semibold">{site.email}</a></p>
               )}
             </div>
             <div>

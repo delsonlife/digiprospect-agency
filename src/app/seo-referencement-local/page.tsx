@@ -3,6 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { FeatureCards } from "@/components/FeatureCards";
+import { GbpResults } from "@/components/GbpResults";
 import { Faq } from "@/components/Faq";
 import { Icon } from "@/components/Icon";
 import { JsonLd } from "@/components/JsonLd";
@@ -86,6 +87,8 @@ export default function Page() {
           </figure>
         </div>
       </section>
+
+      <GbpResults />
 
       <section className="border-y border-line bg-mist">
         <div className="container-page section">

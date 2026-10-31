@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
+import { GbpResults } from "@/components/GbpResults";
 import { Icon } from "@/components/Icon";
 import { PageHero } from "@/components/PageHero";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -9,8 +10,8 @@ import { projects } from "@/content/projects";
 import { site, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Réalisations : sites web et e-commerce",
-  description: "Sites web et boutiques en ligne réalisés pour des entreprises en Côte d'Ivoire et à l'international : YEDEI, Medilo, Mondial Tempo.",
+  title: "Réalisations : sites web et fiches Google",
+  description: "Sites web, boutiques en ligne et fiches Google optimisées pour des entreprises en Côte d'Ivoire et à l'international : YEDEI, Medilo, Mondial Tempo.",
   path: "/realisations",
 });
 
@@ -20,7 +21,7 @@ export default function Page() {
       <PageHero
         crumbs={[{ name: "Réalisations", href: "/realisations" }]}
         title="Réalisations"
-        intro="Une sélection de sites et de boutiques en ligne réalisés pour des entreprises et des structures de secteurs variés."
+        intro="Une sélection de sites, de boutiques en ligne et de fiches Google optimisées, réalisés pour des entreprises et des structures de secteurs variés."
       />
       <section className="section">
         <div className="container-page">
@@ -47,6 +48,7 @@ export default function Page() {
           )}
         </div>
       </section>
+      <GbpResults mist id="fiches-google" />
       <CtaBand />
     </>
   );

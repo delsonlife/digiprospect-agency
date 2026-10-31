@@ -1,5 +1,10 @@
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://digiprospectagency.com").replace(/\/$/, "");
 
+const DEFAULT_WHATSAPP = "2250585793950";
+const envWhatsapp = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "").replace(/\D/g, "");
+// Une valeur provisoire (contenant des X) ou incomplète dans Vercel est ignorée.
+const whatsappNumber = /^\d{11,15}$/.test(envWhatsapp) ? envWhatsapp : DEFAULT_WHATSAPP;
+
 export const site = {
   name: "DigiProspect Agency",
   shortName: "DigiProspect",
@@ -7,8 +12,10 @@ export const site = {
   locale: "fr_CI",
   city: "Abidjan",
   country: "Côte d'Ivoire",
-  // Valeur provisoire : remplacer via NEXT_PUBLIC_WHATSAPP_NUMBER (voir .env.example)
-  whatsapp: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "225XXXXXXXXXX").replace(/[^0-9X]/g, ""),
+  // Numéro WhatsApp et téléphone (format international, sans « + »). NEXT_PUBLIC_WHATSAPP_NUMBER peut le remplacer.
+  whatsapp: whatsappNumber,
+  phoneDisplay: "+225 05 85 79 39 50",
+  phoneHref: `tel:+${whatsappNumber}`,
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
   comeup: process.env.NEXT_PUBLIC_COMEUP_URL || "",
 };

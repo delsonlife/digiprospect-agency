@@ -19,7 +19,7 @@ Copiez `.env.example` vers `.env.local` et renseignez les valeurs.
 | Variable | Rôle |
 |---|---|
 | `NEXT_PUBLIC_SITE_URL` | URL publique (sitemap, canonical, Open Graph). Défaut : `https://digiprospectagency.com` |
-| `NEXT_PUBLIC_WHATSAPP_NUMBER` | Numéro WhatsApp, format `225` + numéro, sans « + » ni espaces. **Valeur provisoire `225XXXXXXXXXX` : à remplacer avant la mise en ligne.** Alimente le bouton flottant, le footer et la page contact |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | Facultatif. Remplace le numéro WhatsApp et téléphone par défaut (`+225 05 85 79 39 50`, défini dans `src/lib/site.ts`). Format : `225` + numéro, sans « + » ni espaces. Une valeur provisoire ou incomplète est ignorée |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | E-mail affiché (footer, contact). Vide = masqué |
 | `NEXT_PUBLIC_COMEUP_URL` | Profil ComeUp. Vide = lien masqué |
 | `RESEND_API_KEY` | Clé API Resend pour l'envoi du formulaire |

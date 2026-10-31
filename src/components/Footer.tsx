@@ -41,6 +41,11 @@ export function Footer() {
                 <Icon name="whatsapp" size={20} className="shrink-0" /> WhatsApp
               </a>
             </li>
+            <li>
+              <a href={site.phoneHref} className="flex items-center gap-3 py-1 hover:text-white">
+                <Icon name="phone" size={20} className="shrink-0" />{site.phoneDisplay}
+              </a>
+            </li>
             {site.email && (
               <li><a href={`mailto:${site.email}`} className="flex items-center gap-3 py-1 hover:text-white"><Icon name="mail" size={20} className="shrink-0" />{site.email}</a></li>
             )}

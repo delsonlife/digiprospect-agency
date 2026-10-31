@@ -100,7 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 sameAs: Array.from(new Set([comeup.url, site.comeup].filter(Boolean))),
                 ...(site.email ? { email: site.email } : {}),
                 ...(hasRealWhatsapp
-                  ? { contactPoint: { "@type": "ContactPoint", contactType: "customer service", url: `https://wa.me/${site.whatsapp}`, availableLanguage: "fr" } }
+                  ? { contactPoint: { "@type": "ContactPoint", contactType: "customer service", telephone: `+${site.whatsapp}`, url: `https://wa.me/${site.whatsapp}`, availableLanguage: "fr" } }
                   : {}),
                 // Aucune adresse n'est publiée tant que NEXT_PUBLIC_BASED_IN_ABIDJAN n'est pas "true".
                 ...(basedInAbidjan ? { address: { "@type": "PostalAddress", addressLocality: "Abidjan", addressCountry: "CI" } } : {}),
