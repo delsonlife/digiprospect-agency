@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { ContactForm } from "@/components/ContactForm";
 import { Icon } from "@/components/Icon";
 import { PageHero } from "@/components/PageHero";
+import { ZonesMap } from "@/components/ZonesMap";
 import { site, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
@@ -56,6 +58,22 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
               </ol>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section className="border-t border-line bg-mist">
+        <div className="container-page section grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-16">
+          <div>
+            <h2 className="text-h2">Nos zones d'intervention</h2>
+            <p className="prose-measure mt-5 text-lg text-ink-soft">
+              Nous intervenons à Abidjan, dans les autres villes de Côte d'Ivoire et à distance à l'international.
+            </p>
+            <p className="prose-measure mt-4 text-ink-soft">
+              Les échanges se font à distance ou lors d'un rendez-vous convenu à l'avance, selon votre localisation.
+            </p>
+            <Link href="/zones-intervention" className="link-underline mt-6 inline-block font-semibold">Voir toutes les zones</Link>
+          </div>
+          <ZonesMap />
         </div>
       </section>
     </>
