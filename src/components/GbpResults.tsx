@@ -31,7 +31,7 @@ export function GbpResults({ mist = false, id }: { mist?: boolean; id?: string }
                 </p>
                 <h3 className="mt-3 text-xl font-bold">{r.business}</h3>
                 <p className="mt-1 text-ink-soft">{r.activity} · {r.place}</p>
-                <p className="mt-4 border-t border-line pt-3 text-[1.05rem]">
+                <p className="mt-4 border-t border-line pt-3 text-[length:var(--text-small)]">
                   <span className="font-semibold">Recherche :</span> «&nbsp;{r.keyword}&nbsp;»
                 </p>
               </div>

@@ -29,7 +29,7 @@ export function HeroLevers() {
           </g>
         ))}
       </svg>
-      <figcaption className="mt-6 grid gap-2 text-[1.05rem] text-ink-soft">
+      <figcaption className="mt-6 grid gap-2 text-[length:var(--text-small)] text-ink-soft">
         <span className="flex gap-3"><i className="mt-2.5 h-2 w-5 shrink-0 rounded-full bg-orange" aria-hidden="true" />Votre activité et vos clients au centre</span>
         <span className="flex gap-3"><i className="mt-2.5 h-2 w-5 shrink-0 rounded-full bg-ink" aria-hidden="true" />Des leviers choisis selon vos objectifs et votre budget</span>
         <span className="flex gap-3"><i className="mt-2.5 h-2 w-5 shrink-0 rounded-full bg-green" aria-hidden="true" />Des actions priorisées, puis ajustées</span>

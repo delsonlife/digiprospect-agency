@@ -46,7 +46,7 @@ export function FeatureCards({ items, cols = 3, compact = false }: { items: Feat
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-ink text-white"><Icon name={c.icon} size={20} /></span>
             <div>
               <h3 className="text-lg font-bold leading-snug">{c.title}</h3>
-              <p className="mt-1 text-[1.05rem] leading-snug text-ink-soft">{c.text}</p>
+              <p className="mt-1 text-[length:var(--text-small)] leading-snug text-ink-soft">{c.text}</p>
             </div>
           </li>
         ) : (
@@ -58,8 +58,8 @@ export function FeatureCards({ items, cols = 3, compact = false }: { items: Feat
                 <h3 className="text-lg font-bold leading-snug sm:text-xl">{c.title}</h3>
               </div>
             </div>
-            <p className="mt-3 text-[1.05rem] leading-snug text-ink-soft">{c.text}</p>
-            {c.hint && <p className="mt-4 border-t border-line pt-3 text-[1.05rem] leading-snug">{c.hint}</p>}
+            <p className="mt-3 text-[length:var(--text-small)] leading-snug text-ink-soft">{c.text}</p>
+            {c.hint && <p className="mt-4 border-t border-line pt-3 text-[length:var(--text-small)] leading-snug">{c.hint}</p>}
             {c.href && (
               <Link href={c.href} className="link-underline mt-auto inline-block pt-4 font-semibold">{c.cta ?? "En savoir plus"}</Link>
             )}

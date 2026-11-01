@@ -20,6 +20,21 @@
   --text-h3: clamp(1.2rem, 0.8vw + 1rem, 1.5rem);
 }
 
+/* Taille de lecture agrandie sur téléphone : la Crimson Pro a une petite hauteur d'x, donc le texte est relevé
+   d'environ 10 % sous 640 px. Les titres (clamp) ne changent pas. */
+:root { --text-small: 1.05rem; }
+@media (max-width: 639px) {
+  :root {
+    --text-sm: 1.125rem;
+    --text-base: 1.1875rem;
+    --text-lg: 1.3125rem;
+    --text-xl: 1.5rem;
+    --text-small: 1.2rem;
+  }
+  body { font-size: 1.3125rem; line-height: 1.55; }
+  .btn { font-size: 1.15rem; }
+}
+
 @layer base {
   html {
     scroll-padding-top: 5.5rem;

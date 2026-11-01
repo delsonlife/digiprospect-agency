@@ -64,7 +64,7 @@ export default function HomePage() {
       <section className="overflow-hidden">
         <div className="container-page grid items-center gap-12 pb-16 pt-10 lg:grid-cols-[1.15fr_1fr] lg:gap-16 lg:pb-24 lg:pt-20">
           <div>
-            <p className="flex items-center gap-3 text-[1.05rem] font-semibold text-ink-soft">
+            <p className="flex items-center gap-3 text-[length:var(--text-small)] font-semibold text-ink-soft">
               <span className="tricolor-sm" aria-hidden="true" />
               Agence web à Abidjan et en Côte d'Ivoire
             </p>
