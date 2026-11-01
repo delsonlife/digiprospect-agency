@@ -41,6 +41,16 @@ export const metadata: Metadata = {
     "DigiProspect Agency crée des sites web professionnels, des boutiques en ligne et accompagne le référencement local des entreprises en Côte d'Ivoire et à l'international.",
   applicationName: site.name,
   alternates: { canonical: "/" },
+  // Icônes à adresses stables (sans paramètre) : Google recommande des favicons de 48 px et multiples (48, 96, 192).
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -81,7 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 name: site.name,
                 alternateName: site.shortName,
                 url: SITE_URL,
-                logo: { "@type": "ImageObject", url: `${SITE_URL}/apple-icon.png`, width: 180, height: 180 },
+                logo: { "@type": "ImageObject", url: `${SITE_URL}/apple-touch-icon.png`, width: 180, height: 180 },
                 image: `${SITE_URL}/opengraph-image`,
                 description: "Création de sites web, boutiques en ligne, optimisation de fiche Google Business Profile et acquisition de clients pour les entreprises de Côte d'Ivoire et d'ailleurs.",
                 knowsLanguage: "fr",
