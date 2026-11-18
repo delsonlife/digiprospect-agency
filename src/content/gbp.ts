@@ -10,7 +10,7 @@ export const gbp = {
     "Optimisation initiale et suivi de la fiche Google pour améliorer sa qualité et renforcer les chances d'être découvert dans les recherches locales.",
   title: "SEO local Côte d'Ivoire : optimisation fiche Google",
   description:
-    "SEO local en Côte d'Ivoire : optimisation et suivi de fiche Google Business Profile (Google My Business) pour mieux apparaître sur Google Maps.",
+    "SEO local en Côte d'Ivoire : optimisation de fiche Google Business Profile et accompagnement mensuel pour mieux apparaître sur Google Maps.",
   h1: "Optimisation de fiche Google Business Profile",
   intro:
     "Votre fiche Google, anciennement Google My Business, est souvent le premier contact entre votre entreprise et un client proche. DigiProspect Agency l'examine, l'améliore et la suit dans la durée pour mieux présenter votre activité sur Google et Google Maps, et renforcer vos chances d'être trouvé par les clients de votre zone.",
@@ -50,6 +50,59 @@ export const gbp = {
   ] as { icon: IconName; scope: string; title: string; text: string }[],
   cardsNote:
     "Le contenu exact dépend de la formule choisie et est précisé dans le devis. L'éligibilité de l'entreprise à une fiche Google est vérifiée avant toute démarche.",
+  monthly: {
+    id: "accompagnement-mensuel",
+    badge: "Prestation récurrente",
+    title: "Accompagnement SEO local mensuel",
+    intro:
+      "Après la mise en ligne de votre site, ou si vous en avez déjà un, DigiProspect Agency peut vous accompagner chaque mois pour développer votre visibilité locale sur Google. L'accompagnement est adapté à votre secteur d'activité, à la concurrence et à votre zone géographique.",
+    compare: [
+      { title: "Optimisation ponctuelle", text: "Audit et optimisation de la fiche : une intervention de départ, détaillée plus haut sur cette page." },
+      { title: "Accompagnement mensuel", text: "Un travail suivi dans la durée, avec des actions régulières, un bilan périodique et des recommandations pour la suite." },
+    ],
+    groups: [
+      {
+        icon: "pin",
+        title: "Optimisation Google Business Profile",
+        items: [
+          "Création ou optimisation de la fiche",
+          "Optimisation des catégories, services et descriptions",
+          "Amélioration de la pertinence locale de la fiche",
+          "Publications régulières",
+          "Conseils pour développer les avis clients",
+          "Suivi et ajustements de la fiche",
+        ],
+      },
+      {
+        icon: "search",
+        title: "Référencement local continu",
+        items: [
+          "Recherche de nouvelles opportunités de mots-clés locaux",
+          "Optimisation progressive des pages locales du site",
+          "Création ou amélioration de contenus géolocalisés pertinents",
+          "Développement des liens entre les pages locales du site",
+          "Recherche d'opportunités de citations locales (présence sur des annuaires et sites locaux) et de backlinks pertinents (liens d'autres sites vers le vôtre)",
+          "Analyse de la concurrence locale",
+        ],
+      },
+      {
+        icon: "refresh",
+        title: "Suivi des résultats",
+        items: [
+          "Suivi de la visibilité sur Google et Google Maps",
+          "Analyse des impressions, des clics et des interactions",
+          "Identification des mots-clés qui génèrent des opportunités",
+          "Bilan périodique et prochaines actions recommandées",
+        ],
+      },
+    ] as { icon: IconName; title: string; items: string[] }[],
+    note:
+      "Le contenu exact varie selon la formule, le secteur et la concurrence, et il est précisé dans le devis. Aucune position ni aucun délai de résultat n'est garanti.",
+    independent:
+      "Cet accompagnement peut aussi être proposé aux entreprises qui ont déjà un site internet, même s'il n'a pas été créé par DigiProspect Agency, ou qui souhaitent simplement optimiser leur fiche Google.",
+    priceText: "Cette prestation est proposée sur devis, selon votre activité et vos besoins.",
+    cta: "Demander un devis pour l'accompagnement",
+  },
   followTitle: "Une fiche Google se travaille dans la durée",
   followText:
     "Optimiser une fiche une seule fois puis l'abandonner est rarement suffisant. Les informations changent, de nouvelles fonctionnalités apparaissent, des modifications non souhaitées peuvent être proposées et les attentes des clients évoluent.",
@@ -128,6 +181,14 @@ export const gbp = {
     {
       q: "Peut-on obtenir des avis rapidement ?",
       a: "Seuls des avis authentiques, laissés par de vrais clients, ont leur place sur une fiche. Des conseils sont donnés pour en obtenir de façon légitime et y répondre, mais aucun avis n'est acheté ni fabriqué.",
+    },
+    {
+      q: "L'accompagnement mensuel est-il réservé aux sites que vous avez créés ?",
+      a: "Non. Il peut être proposé aux entreprises qui ont déjà leur propre site, ou qui souhaitent simplement optimiser leur fiche Google. Il est aussi possible de le démarrer après la création d'un site avec DigiProspect Agency.",
+    },
+    {
+      q: "Quelle différence entre l'optimisation de la fiche et l'accompagnement mensuel ?",
+      a: "L'optimisation est une intervention de départ : audit, corrections et améliorations de la fiche. L'accompagnement mensuel prolonge ce travail dans la durée, avec des actions régulières, un suivi des résultats et un bilan périodique. Le tarif est proposé sur devis.",
     },
     {
       q: "Ai-je besoin d'un site web ?",

@@ -20,7 +20,7 @@ Copiez `.env.example` vers `.env.local` et renseignez les valeurs.
 |---|---|
 | `NEXT_PUBLIC_SITE_URL` | URL publique (sitemap, canonical, Open Graph). Défaut : `https://digiprospectagency.com` |
 | `NEXT_PUBLIC_WHATSAPP_NUMBER` | Facultatif. Remplace le numéro WhatsApp et téléphone par défaut (`+225 05 85 79 39 50`, défini dans `src/lib/site.ts`). Format : `225` + numéro, sans « + » ni espaces. Une valeur provisoire ou incomplète est ignorée |
-| `NEXT_PUBLIC_CONTACT_EMAIL` | E-mail affiché (footer, contact). Vide = masqué |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Facultatif. Remplace l'e-mail affiché (par défaut `contact@digiprospectagency.com`, défini dans `src/lib/site.ts`). La boîte doit exister et recevoir des messages |
 | `NEXT_PUBLIC_COMEUP_URL` | Profil ComeUp. Vide = lien masqué |
 | `RESEND_API_KEY` | Clé API Resend pour l'envoi du formulaire |
 | `CONTACT_TO_EMAIL` | Adresse qui reçoit les demandes de devis |

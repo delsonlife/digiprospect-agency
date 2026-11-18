@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { Icon } from "./Icon";
-import { budgetOptions, serviceOptions, validate, type ContactPayload, type FieldErrors } from "@/lib/contact-schema";
+import { GOOGLE_ADS_SERVICE, budgetOptions, googleAdsOptions, serviceOptions, validate, type ContactPayload, type FieldErrors } from "@/lib/contact-schema";
 import { whatsappLink } from "@/lib/site";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -10,7 +10,8 @@ type Status = "idle" | "sending" | "sent" | "error";
 const field =
   "mt-2 block min-h-12 w-full rounded-lg border-2 border-line bg-white px-4 py-3 text-base text-ink placeholder:text-ink-soft/70 focus:border-ink focus:outline-none";
 
-export function ContactForm({ defaultService = "" }: { defaultService?: string }) {
+export function ContactForm({ defaultService = "", defaultGoogleAds = [] }: { defaultService?: string; defaultGoogleAds?: string[] }) {
+  const [service, setService] = useState(defaultService);
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<FieldErrors>({});
   const [serverError, setServerError] = useState("");
@@ -25,6 +26,7 @@ export function ContactForm({ defaultService = "" }: { defaultService?: string }
       service: String(form.get("service") ?? ""),
       message: String(form.get("message") ?? ""),
       budget: String(form.get("budget") ?? ""),
+      googleAds: form.get("service") === GOOGLE_ADS_SERVICE ? form.getAll("googleAds").map(String) : [],
       website: String(form.get("website") ?? ""),
     };
     const found = validate(payload);
@@ -94,12 +96,26 @@ export function ContactForm({ defaultService = "" }: { defaultService?: string }
       </div>
       <div>
         <label htmlFor="service" className="font-semibold">Service souhaité</label>
-        <select id="service" name="service" required defaultValue={defaultService} className={field} {...aria("service")}>
+        <select id="service" name="service" required value={service} onChange={(e) => setService(e.target.value)} className={field} {...aria("service")}>
           <option value="" disabled>Choisir un service</option>
           {serviceOptions.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
         {err("service")}
       </div>
+      {service === GOOGLE_ADS_SERVICE && (
+        <fieldset className="rounded-xl border-2 border-line p-4">
+          <legend className="px-2 font-semibold">Quelles prestations Google Ads vous intéressent ? <span className="font-normal text-ink-soft">(plusieurs choix possibles)</span></legend>
+          <div className="mt-2 space-y-1">
+            {googleAdsOptions.map((o) => (
+              <label key={o} className="flex min-h-11 cursor-pointer items-center gap-3 py-1">
+                <input type="checkbox" name="googleAds" value={o} defaultChecked={defaultGoogleAds.includes(o)} className="h-5 w-5 shrink-0 accent-[#1f2326]" />
+                <span>{o}</span>
+              </label>
+            ))}
+          </div>
+          <p className="mt-3 text-sm text-ink-soft">Le budget publicitaire est payé directement à Google : il est distinct des frais de prestation.</p>
+        </fieldset>
+      )}
       <div>
         <label htmlFor="message" className="font-semibold">Votre besoin</label>
         <textarea id="message" name="message" rows={6} required className={field}

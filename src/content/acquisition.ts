@@ -68,7 +68,7 @@ export const acquisition = {
     { icon: "check", scope: "Mise en place", title: "Mise en ligne et vérifications", text: "Lancement des actions retenues et contrôle de leur bon fonctionnement." },
     { icon: "refresh", scope: "Suivi", title: "Suivi et ajustements", text: "Lecture des résultats et ajustements, selon la formule retenue." },
   ] as Feature[],
-  includesNote: "Toutes ces étapes ne sont pas incluses dans chaque formule : le périmètre exact est précisé dans le devis.",
+  includesNote: "Toutes ces étapes ne sont pas incluses dans chaque formule : le périmètre exact est précisé dans le devis. La mise en place est une prestation ponctuelle ; le suivi et les ajustements sont une prestation récurrente, distincte.",
   budgetTitle: "Budget publicitaire et honoraires",
   budgetText:
     "Le budget publicitaire, c'est-à-dire les sommes diffusées sur Facebook, Instagram ou TikTok, est distinct des honoraires de la prestation. Son montant est défini avec vous.",

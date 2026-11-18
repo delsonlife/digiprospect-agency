@@ -43,6 +43,23 @@ export function ServicePage({ service, related }: { service: Service; related: S
         </div>
       </section>
 
+      {service.onPage && (
+        <section className="section">
+          <div className="container-page">
+            <div className="max-w-3xl">
+              <h2 className="text-h2">{service.onPage.title}</h2>
+              <p className="prose-measure mt-5 text-lg text-ink-soft">{service.onPage.intro}</p>
+            </div>
+            <div className="mt-10"><FeatureCards items={service.onPage.items} cols={3} compact /></div>
+            <p className="prose-measure mt-6 text-sm text-ink-soft">{service.onPage.note}</p>
+            <div className="mt-8 rounded-2xl border-l-4 border-green bg-mist p-6">
+              <p className="prose-measure text-ink">{service.onPage.followText}</p>
+              <Link href={service.onPage.followHref} className="link-underline mt-3 inline-block font-semibold">{service.onPage.followLabel}</Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="section">
         <div className="container-page">
           <h2 className="text-h2">Les étapes de travail</h2>

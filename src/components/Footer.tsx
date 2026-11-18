@@ -11,13 +11,13 @@ export function Footer() {
         <div>
           <Logo light />
           <p className="mt-5 max-w-xs text-[length:var(--text-small)] leading-relaxed">
-            Sites web, boutiques en ligne, fiche Google et acquisition de clients pour les entreprises de Côte d'Ivoire et d'ailleurs.
+            Sites web, boutiques en ligne, fiche Google, Google Ads et acquisition de clients pour les entreprises de Côte d'Ivoire et d'ailleurs.
           </p>
         </div>
         <div>
           <p className="font-display text-base font-bold text-white">Services</p>
           <ul className="mt-4 space-y-2 text-[length:var(--text-small)]">
-            {nav.slice(0, 4).map((i) => (
+            {nav.slice(0, 5).map((i) => (
               <li key={i.href}><Link href={i.href} className="inline-block py-1 hover:text-white link-underline">{i.label}</Link></li>
             ))}
           </ul>

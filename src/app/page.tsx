@@ -6,28 +6,62 @@ import { Faq } from "@/components/Faq";
 import { FounderSection } from "@/components/FounderSection";
 import { FeatureCards, type Feature } from "@/components/FeatureCards";
 import { HeroLevers } from "@/components/HeroLevers";
-import { type IconName } from "@/components/Icon";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ReviewsSection } from "@/components/ReviewsSection";
+import { SeoFollowUp } from "@/components/SeoFollowUp";
+import { TwoLevers } from "@/components/TwoLevers";
 import { projects } from "@/content/projects";
-import { homeFaq, services } from "@/content/services";
+import { homeFaq } from "@/content/services";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Agence web à Abidjan | Visibilité et acquisition de clients",
-  description: "Agence web à Abidjan : site internet, fiche Google, publicité Facebook, Instagram et TikTok pour développer votre visibilité en Côte d'Ivoire.",
+  description: "Agence web à Abidjan : site internet, SEO local, Google Ads et publicité Facebook, Instagram, TikTok pour développer votre visibilité en Côte d'Ivoire.",
   path: "/",
   absoluteTitle: true,
 });
 
 const AUDIT_HREF = "/contact?service=audit";
 
-const serviceIcons: Record<string, IconName> = {
-  "creation-site-web": "browser",
-  "creation-site-ecommerce": "cart",
-  "seo-referencement-local": "pin",
-  "acquisition-clients": "megaphone",
-};
+const domains: Feature[] = [
+  {
+    icon: "browser",
+    title: "Sites web et boutiques en ligne",
+    text: "Sites vitrines, refontes et boutiques en ligne, avec le SEO on-page inclus dès la conception.",
+    links: [
+      { label: "Création de sites", href: "/creation-site-web-abidjan" },
+      { label: "Boutiques en ligne", href: "/creation-site-ecommerce" },
+    ],
+  },
+  {
+    icon: "pin",
+    title: "Référencement naturel et SEO local",
+    text: "Optimisation de la fiche Google Business Profile et accompagnement SEO local mensuel.",
+    href: "/seo-referencement-local",
+    cta: "Voir le référencement local",
+  },
+  {
+    icon: "target",
+    title: "Publicité Google Ads",
+    text: "Création, tracking, lancement et gestion de vos campagnes Google Ads.",
+    href: "/google-ads-abidjan",
+    cta: "Voir Google Ads",
+  },
+  {
+    icon: "megaphone",
+    title: "Publicité Facebook, Instagram et TikTok",
+    text: "Campagnes sur les réseaux sociaux et accompagnement sur Facebook Marketplace.",
+    href: "/acquisition-clients",
+    cta: "Voir l'acquisition de clients",
+  },
+  {
+    icon: "sliders",
+    title: "Développement web sur mesure",
+    text: "Fonctionnalités et solutions web conçues selon les besoins spécifiques de l'entreprise.",
+    href: "/creation-site-web-abidjan",
+    cta: "Parler de votre besoin",
+  },
+];
 
 const levers = [
   "Comprendre l'activité, les produits ou les services et les objectifs.",
@@ -52,13 +86,6 @@ const process = [
 
 export default function HomePage() {
   const featured = projects.slice(0, 3);
-  const serviceCards: Feature[] = services.map((s) => ({
-    icon: serviceIcons[s.slug] ?? "check",
-    title: s.name,
-    text: s.short,
-    href: s.path,
-    cta: "Voir le détail",
-  }));
   return (
     <>
       <section className="overflow-hidden">
@@ -92,7 +119,7 @@ export default function HomePage() {
               Nous sélectionnons les leviers les plus pertinents selon ce que vous proposez, les clients que vous souhaitez atteindre et vos objectifs commerciaux.
             </p>
           </div>
-          <div className="mt-10"><FeatureCards items={serviceCards} cols={2} /></div>
+          <div className="mt-10"><FeatureCards items={domains} cols={3} /></div>
         </div>
       </section>
 
@@ -143,6 +170,10 @@ export default function HomePage() {
           </div>
         </section>
       )}
+
+      <SeoFollowUp />
+
+      <TwoLevers />
 
       <ComeupSection />
 

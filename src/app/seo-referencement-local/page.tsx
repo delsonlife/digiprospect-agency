@@ -119,6 +119,48 @@ export default function Page() {
         </div>
       </section>
 
+      <section id={gbp.monthly.id} className="border-y border-line bg-mist">
+        <div className="container-page section">
+          <div className="max-w-3xl">
+            <p className="inline-flex w-fit items-center rounded-full bg-green/10 px-3 py-1 text-sm font-semibold text-green-deep">{gbp.monthly.badge}</p>
+            <h2 className="mt-4 text-h2">{gbp.monthly.title}</h2>
+            <p className="prose-measure mt-5 text-lg text-ink-soft">{gbp.monthly.intro}</p>
+          </div>
+          <ul className="mt-8 grid gap-4 md:grid-cols-2">
+            {gbp.monthly.compare.map((c) => (
+              <li key={c.title} className="rounded-xl border border-line bg-white p-5">
+                <h3 className="text-lg font-bold">{c.title}</h3>
+                <p className="mt-1 text-ink-soft">{c.text}</p>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-8 grid gap-5 lg:grid-cols-3">
+            {gbp.monthly.groups.map((g) => (
+              <div key={g.title} className="rounded-2xl border border-line bg-white p-6">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-ink text-white"><Icon name={g.icon} size={20} /></span>
+                  <h3 className="text-lg font-bold leading-snug sm:text-xl">{g.title}</h3>
+                </div>
+                <ul className="mt-4 space-y-3">
+                  {g.items.map((i) => (
+                    <li key={i} className="flex gap-3">
+                      <Icon name="check" size={18} strokeWidth={3} className="mt-1.5 shrink-0 text-green-deep" />
+                      <span className="text-[length:var(--text-small)] leading-snug">{i}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className="prose-measure mt-6 text-sm text-ink-soft">{gbp.monthly.note}</p>
+          <p className="prose-measure mt-3 border-l-4 border-green pl-5 text-ink-soft">{gbp.monthly.independent}</p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Link href="/contact?service=seo-local-mensuel" className="btn btn-primary">{gbp.monthly.cta}</Link>
+            <p className="text-ink-soft">{gbp.monthly.priceText}</p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-ink text-white">
         <div className="container-page section">
           <h2 className="max-w-2xl text-h2">{gbp.stepsTitle}</h2>

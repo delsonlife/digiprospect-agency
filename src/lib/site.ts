@@ -16,7 +16,7 @@ export const site = {
   whatsapp: whatsappNumber,
   phoneDisplay: "+225 05 85 79 39 50",
   phoneHref: `tel:+${whatsappNumber}`,
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@digiprospectagency.com",
   comeup: process.env.NEXT_PUBLIC_COMEUP_URL || "",
 };
 
@@ -28,6 +28,7 @@ export const nav = [
   { href: "/creation-site-web-abidjan", label: "Création de sites" },
   { href: "/creation-site-ecommerce", label: "Boutiques en ligne" },
   { href: "/seo-referencement-local", label: "Fiche Google" },
+  { href: "/google-ads-abidjan", label: "Google Ads" },
   { href: "/acquisition-clients", label: "Acquisition de clients" },
   { href: "/realisations", label: "Réalisations" },
   { href: "/a-propos", label: "À propos" },
@@ -42,7 +43,23 @@ export const whatsappMessages: Record<string, string> = {
   "/": "Bonjour, je souhaite un audit découverte pour développer ma visibilité et trouver de nouveaux clients.",
   "/creation-site-web-abidjan": "Bonjour, je souhaite un devis pour la création ou la refonte de mon site web.",
   "/creation-site-ecommerce": "Bonjour, je souhaite un devis pour une boutique en ligne.",
+  "/google-ads-abidjan": "Bonjour, je souhaite un devis pour mes campagnes Google Ads.",
   "/acquisition-clients": "Bonjour, je souhaite un audit découverte pour trouver les meilleures sources de clients pour mon activité.",
   "/seo-referencement-local": "Bonjour, je souhaite en savoir plus sur l'optimisation de ma fiche Google Business Profile.",
   default: "Bonjour, je vous contacte depuis le site DigiProspect Agency.",
+};
+
+/** Identité de l'éditeur (mentions légales et politique de confidentialité). Uniquement des informations confirmées. */
+export const legal = {
+  editor: "Soenonkpon Daniel",
+  legalForm: "entreprise individuelle",
+  publicationDirector: "Soenonkpon Daniel",
+  address: "Port-Bouët, Abidjan, Côte d'Ivoire",
+  host: {
+    name: "Vercel Inc.",
+    address: "440 N Barranca Ave #4133, Covina, CA 91723, États-Unis",
+    url: "https://vercel.com",
+  },
+  retention: "le temps nécessaire pour traiter la demande, puis trois ans au maximum après le dernier contact",
+  updated: "novembre 2026",
 };

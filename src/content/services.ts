@@ -1,10 +1,14 @@
 import type { Feature } from "@/components/FeatureCards";
 import { acquisition } from "./acquisition";
 import { gbp } from "./gbp";
+import { googleAds } from "./google-ads";
+import { seoOnPage } from "./seo-onpage";
 
 export type Faq = { q: string; a: string };
 
 export type Service = {
+  /** SEO on-page inclus (page de création de site). */
+  onPage?: typeof seoOnPage;
   image: { src: string; alt: string };
   slug: string;
   path: string;
@@ -26,6 +30,7 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "creation-site-web",
+    onPage: seoOnPage,
     image: { src: "/images/creation-site-web-abidjan-maquette-responsive.svg", alt: "Illustration d'un site web affiché sur ordinateur et sur téléphone, avec un bouton de contact" },
     path: "/creation-site-web-abidjan",
     name: "Création de sites web",
@@ -50,7 +55,7 @@ export const services: Service[] = [
       { icon: "grid", title: "Design sur mesure", text: "Mise en page cohérente avec votre identité, lisible sur téléphone comme sur ordinateur." },
       { icon: "mail", title: "Formulaire de contact", text: "Les demandes de vos visiteurs vous parviennent directement par e-mail." },
       { icon: "whatsapp", title: "Contact et pages légales", text: "Bouton WhatsApp, liens de contact visibles, mentions légales et politique de confidentialité." },
-      { icon: "search", title: "Bases du référencement", text: "Titres, descriptions et plan du site, déclaration à Google, puis mise en ligne." },
+      { icon: "search", title: "SEO on-page inclus", text: "Mots-clés, balises, structure, images, vitesse et préparation à l'indexation, dès la conception." },
     ],
     steps: [
       { title: "Cadrage", text: "Définition de votre activité, de vos clients cibles, de vos pages et de l'objectif principal du site." },
@@ -75,6 +80,10 @@ export const services: Service[] = [
       {
         q: "Mon site sera-t-il utilisable sur un petit téléphone Android ?",
         a: "C'est la base du travail : chaque page est conçue d'abord pour les petits écrans, puis adaptée aux tablettes et aux ordinateurs.",
+      },
+      {
+        q: "Le SEO est-il inclus dans la création du site ?",
+        a: "Oui. Le SEO on-page de base est inclus dans chaque création de site : mots-clés, balises, structure des titres, URLs, images, mobile, vitesse et préparation à l'indexation. L'accompagnement SEO local mensuel est une prestation distincte, proposée après la mise en ligne.",
       },
       {
         q: "Le site sera-t-il bien placé sur Google ?",
@@ -179,9 +188,31 @@ export const services: Service[] = [
     faq: acquisition.faq,
     quoteLabel: acquisition.quoteLabel,
   },
+  {
+    slug: googleAds.slug,
+    path: googleAds.path,
+    name: googleAds.name,
+    short: googleAds.short,
+    title: googleAds.title,
+    description: googleAds.description,
+    h1: googleAds.h1,
+    image: googleAds.image,
+    intro: googleAds.intro,
+    problem: googleAds.trackingIntro,
+    benefits: googleAds.monthly.slice(0, 4),
+    includes: googleAds.levels,
+    steps: googleAds.levels.map((l) => ({ title: l.title, text: l.text })),
+    needed: googleAds.account.map((n) => n.title),
+    faq: googleAds.faq,
+    quoteLabel: googleAds.primaryCta,
+  },
 ];
 
 export const homeFaq: Faq[] = [
+  {
+    q: "Faut-il choisir entre référencement naturel et publicité ?",
+    a: "Pas forcément. Le référencement naturel et le SEO local construisent une présence dans la durée ; la publicité (Google Ads, Facebook, Instagram, TikTok) permet d'agir selon vos objectifs et votre budget. Selon votre activité, l'un, l'autre ou les deux peuvent avoir du sens : c'est ce que permet de déterminer l'audit découverte.",
+  },
   {
     q: "Mon entreprise a-t-elle forcément besoin d'un site web ?",
     a: "Pas toujours. Selon votre activité, votre clientèle et vos objectifs, d'autres leviers peuvent être plus adaptés : fiche Google, publicité Facebook, Instagram ou TikTok, Facebook Marketplace. Un audit découverte permet de choisir ce qui convient à votre cas, parfois en combinant plusieurs solutions.",

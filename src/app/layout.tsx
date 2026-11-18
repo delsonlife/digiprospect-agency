@@ -93,7 +93,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 url: SITE_URL,
                 logo: { "@type": "ImageObject", url: `${SITE_URL}/apple-touch-icon.png`, width: 180, height: 180 },
                 image: `${SITE_URL}/opengraph-image`,
-                description: "Création de sites web, boutiques en ligne, optimisation de fiche Google Business Profile et acquisition de clients pour les entreprises de Côte d'Ivoire et d'ailleurs.",
+                description: "Création de sites web, boutiques en ligne, optimisation de fiche Google Business Profile, Google Ads et acquisition de clients pour les entreprises de Côte d'Ivoire et d'ailleurs.",
                 knowsLanguage: "fr",
                 areaServed: [
                   { "@type": "City", name: "Abidjan" },

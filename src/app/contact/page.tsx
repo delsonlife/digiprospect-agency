@@ -4,6 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 import { ContactForm } from "@/components/ContactForm";
 import { Icon } from "@/components/Icon";
 import { PageHero } from "@/components/PageHero";
+import { GOOGLE_ADS_SERVICE, googleAdsOptions } from "@/lib/contact-schema";
 import { ZonesMap } from "@/components/ZonesMap";
 import { site, whatsappLink } from "@/lib/site";
 
@@ -17,12 +18,18 @@ const preset: Record<string, string> = {
   "creation-site-web": "Création de site web",
   "creation-site-ecommerce": "Boutique en ligne",
   "seo-referencement-local": "Optimisation de fiche Google Business Profile",
+  "seo-local-mensuel": "Accompagnement SEO local mensuel",
+  "google-ads": GOOGLE_ADS_SERVICE,
+  "google-ads-gestion": GOOGLE_ADS_SERVICE,
   "acquisition-clients": "Audit découverte et acquisition de clients",
   audit: "Audit découverte et acquisition de clients",
 };
 
-export default async function Page({ searchParams }: { searchParams: Promise<{ service?: string }> }) {
-  const { service } = await searchParams;
+export default async function Page({ searchParams }: { searchParams: Promise<{ service?: string; need?: string }> }) {
+  const { service, need } = await searchParams;
+  const needIndex = { compte: 0, tracking: 1, lancement: 2, gestion: 3 }[need ?? ""];
+  const defaultGoogleAds =
+    service === "google-ads-gestion" ? [googleAdsOptions[3]] : needIndex !== undefined ? [googleAdsOptions[needIndex]] : [];
   return (
     <>
       <PageHero
@@ -33,7 +40,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
       />
       <section className="section">
         <div className="container-page grid gap-14 lg:grid-cols-[1.3fr_1fr] lg:gap-20">
-          <ContactForm defaultService={service ? preset[service] ?? "" : ""} />
+          <ContactForm defaultService={service ? preset[service] ?? "" : ""} defaultGoogleAds={service?.startsWith("google-ads") ? defaultGoogleAds : []} />
           <aside className="space-y-10">
             <div>
               <h2 className="text-h3 font-bold">Plutôt par message ?</h2>

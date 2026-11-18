@@ -36,7 +36,7 @@ export default function Page() {
               Le nom dit l'objectif : un site utile se juge à ce qu'il apporte à l'entreprise, pas seulement à son apparence. Chaque projet commence par une question simple : qui doit vous trouver, et que doit-il faire ensuite ?
             </p>
             <p>
-              {site.name} intervient à Abidjan et partout en Côte d'Ivoire, ainsi qu'à distance à l'international, sur quatre sujets : le site web, la boutique en ligne, la fiche Google Business Profile et l'acquisition de clients.
+              {site.name} intervient à Abidjan et partout en Côte d'Ivoire, ainsi qu'à distance à l'international, sur plusieurs sujets : le site web, la boutique en ligne, la fiche Google Business Profile, la publicité Google Ads et l'acquisition de clients sur les réseaux sociaux.
             </p>
           </div>
           {/* TODO : ajouter ici une courte présentation personnelle (parcours, spécialités) et une photo réelle. */}

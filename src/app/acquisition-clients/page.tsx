@@ -38,6 +38,9 @@ export default function Page() {
           </div>
           <div className="mt-10"><FeatureCards items={a.levers} cols={3} /></div>
           <p className="prose-measure mt-8 text-ink-soft">{a.leversNote}</p>
+          <p className="prose-measure mt-3 text-ink-soft">
+            Pour les campagnes sur Google (recherche, Display, Performance Max), consultez la page <Link href="/google-ads-abidjan" className="link-underline font-semibold">Google Ads</Link>.
+          </p>
         </div>
       </section>
 

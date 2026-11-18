@@ -6,7 +6,7 @@ import { communes } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Zones d'intervention : Côte d'Ivoire",
-  description: "DigiProspect Agency accompagne les entreprises d'Abidjan, de Côte d'Ivoire et, à distance, de l'étranger : sites web, boutiques, fiche Google, acquisition de clients.",
+  description: "Services web à Abidjan, en Côte d'Ivoire et à distance depuis l'étranger : sites web, boutiques, fiche Google, Google Ads et acquisition de clients.",
   path: "/zones-intervention",
 });
 

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { validate, type ContactPayload } from "@/lib/contact-schema";
+import { GOOGLE_ADS_SERVICE, googleAdsOptions, validate, type ContactPayload } from "@/lib/contact-schema";
 
 export const runtime = "nodejs";
 
@@ -41,6 +41,11 @@ export async function POST(req: Request) {
     service: String(body.service ?? ""),
     message: String(body.message ?? ""),
     budget: String(body.budget ?? ""),
+    // Les prestations Google Ads ne sont retenues que pour le service Google Ads ; valeurs inconnues ignorées.
+    googleAds:
+      String(body.service ?? "") === GOOGLE_ADS_SERVICE && Array.isArray(body.googleAds)
+        ? body.googleAds.map(String).filter((o) => (googleAdsOptions as readonly string[]).includes(o))
+        : [],
     website: String(body.website ?? ""),
   };
 
@@ -64,6 +69,7 @@ export async function POST(req: Request) {
     <p><strong>Entreprise :</strong> ${esc(payload.company) || "—"}</p>
     <p><strong>Contact :</strong> ${esc(payload.contact)}</p>
     <p><strong>Service :</strong> ${esc(payload.service)}</p>
+    ${payload.googleAds && payload.googleAds.length ? `<p><strong>Prestations Google Ads :</strong> ${payload.googleAds.map(esc).join(", ")}</p>` : ""}
     <p><strong>Budget indicatif :</strong> ${esc(payload.budget) || "—"}</p>
     <p><strong>Besoin :</strong></p>
     <p style="white-space:pre-wrap">${esc(payload.message)}</p>`;

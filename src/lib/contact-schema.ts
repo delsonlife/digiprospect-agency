@@ -1,8 +1,20 @@
+export const GOOGLE_ADS_SERVICE = "Google Ads – Création et gestion de campagnes" as const;
+
+/** Prestations Google Ads sélectionnables lorsque le service Google Ads est choisi. */
+export const googleAdsOptions = [
+  "Création et configuration du compte",
+  "Tracking et suivi des conversions",
+  "Création et lancement de campagnes",
+  "Gestion et optimisation mensuelle",
+] as const;
+
 export const serviceOptions = [
   "Création de site web",
   "Refonte de site existant",
   "Boutique en ligne",
   "Optimisation de fiche Google Business Profile",
+  "Accompagnement SEO local mensuel",
+  GOOGLE_ADS_SERVICE,
   "Audit découverte et acquisition de clients",
   "Autre besoin",
 ] as const;
@@ -22,6 +34,8 @@ export type ContactPayload = {
   service: string;
   message: string;
   budget: string;
+  /** Prestations Google Ads souhaitées (uniquement si le service Google Ads est choisi). */
+  googleAds?: string[];
   website?: string; // champ piège anti-spam, doit rester vide
 };
 
@@ -39,6 +53,7 @@ export function validate(p: ContactPayload): FieldErrors {
   if (!(serviceOptions as readonly string[]).includes(p.service)) e.service = "Choisissez un service.";
   if (p.message.trim().length < 20) e.message = "Décrivez votre besoin en au moins 20 caractères.";
   if (p.message.length > 4000) e.message = "Message trop long (4000 caractères maximum).";
+  if (p.googleAds && !p.googleAds.every((o) => (googleAdsOptions as readonly string[]).includes(o))) e.googleAds = "Sélection invalide.";
   if (p.company.length > 160) e.company = "Nom d'entreprise trop long.";
   return e;
 }
